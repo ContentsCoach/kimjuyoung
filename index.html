@@ -28,17 +28,20 @@ p{font-size:18px; color:#aaa; margin-bottom:24px; font-weight: 400;}
 .emphasize{color:#fff; font-weight:700; font-size:20px; margin-bottom:24px; display: block;}
 .point-color{color:#00ff95; font-weight:900;}
 
-.badge{
-  display:inline-block;
-  font-size:14px;
-  font-weight:700;
-  padding:6px 16px;
-  background:#00ff95;
-  border-radius:4px;
-  margin-bottom:20px;
-  color:#000;
+/* [수정 포인트] 두 번째 이미지의 라벨 스타일과 100% 일치하도록 세팅 */
+.top-label {
+  display: inline-block; /* 텍스트 길이에 맞춤 */
+  background: #00ff95;  /* 네온 그린 */
+  color: #000;          /* 검정 글씨 */
+  font-size: 14px;      /* 이미지와 동일한 작은 크기 */
+  font-weight: 800;     /* 볼드 */
+  padding: 8px 14px;    /* 슬림한 높이와 좌우 여백 */
+  border-radius: 4px;   /* 이미지처럼 각진 느낌의 라운드 */
+  text-decoration: none;
+  margin-bottom: 40px;  /* 아래 문구와의 간격 */
 }
 
+/* 하단 문의하기 버튼은 그대로 유지 */
 .ctaRow{
   display:flex;
   flex-direction: column;
@@ -55,7 +58,6 @@ p{font-size:18px; color:#aaa; margin-bottom:24px; font-weight: 400;}
   border-radius:12px;
   text-decoration:none;
 }
-.cta.alt{ background:#1a1a1e; color:#00ff95; border:1px solid #00ff95; }
 
 /* 프로필 섹션 */
 .profile{
@@ -132,7 +134,7 @@ p{font-size:18px; color:#aaa; margin-bottom:24px; font-weight: 400;}
 <main class="container">
 
 <section>
-  <a href="#" class="cta" style="display:block; margin-bottom:50px;">김주영 코치 전문성 확인하기 ></a>
+  <a href="#" class="top-label">김주영 코치 전문성 확인하기</a>
 
   <p class="emphasize">
     많은 사람들이 운동을 배우기 전<br>
@@ -155,83 +157,6 @@ p{font-size:18px; color:#aaa; margin-bottom:24px; font-weight: 400;}
     전문성이 낮을수록 가격을 낮춰야 하고,<br>
     그만큼 결과를 만들 확률도 낮아집니다.<br>
     그래서 열심히 했는데도 몸이 달라지지 않는 겁니다.
-  </p>
-</section>
-
-<section>
-  <span class="emphasize">우리는 이미 알고 있습니다.</span>
-  <p>
-    몸이 조금 아프면 동네 병원을 가지만,<br>
-    문제가 심각하다고 느껴지면 비용이 들더라도 대학병원을 선택합니다.
-  </p>
-
-  <p class="emphasize" style="font-size:24px; border-bottom: 1px solid #333; padding-bottom: 20px;">
-    이유는 단순합니다.<br>
-    의사의 전문성이 다르고,<br>
-    경험이 다르고,<br>
-    판단의 깊이가 다르기 때문입니다.
-  </p>
-
-  <p class="emphasize" style="margin-top:30px;">
-    운동도 똑같습니다.<br>
-    어떤 운동을 배우느냐보다
-  </p>
-  
-  <h1 class="point-color">누구에게 배우느냐가 먼저입니다.</h1>
-
-  <div class="profile">
-    <img src="me.png" alt="김주영 코치">
-    <div class="profileText">
-      <span class="profileName">김주영 코치 | 재활 & 교정 전문가</span>
-      <span class="profileInfo">
-        한국체육대학교 학사·석사 (전공: Biomechanics, 생체역학)
-      </span>
-    </div>
-  </div>
-</section>
-
-<section>
-  <h2>주요 경력 및 연구 데이터</h2>
-  <div class="career-container">
-    <div class="career-card">
-      <span class="card-title">호텔신라 Advance Personal Trainer</span>
-      <span class="card-sub">상위 등급 퍼스널 트레이너</span>
-    </div>
-    <div class="career-card">
-      <span class="card-title">삼성엔지니어링 · 삼성물산 전담 트레이닝</span>
-      <span class="card-sub">부사장 · 전무 · 상무 전담</span>
-    </div>
-    <div class="career-card">
-      <span class="card-title">15년간 3,000명 이상의 현장 경험</span>
-      <span class="card-sub">연구 데이터 융합 통증 관리 · 재활 운동 · 체형 교정 결과 증명</span>
-    </div>
-  </div>
-
-  <div class="academic-list">
-    <p>· 한국체육대학교 Motion Innovation Center 연구보조 (보행·러닝·무선 족저압 인솔 관련 논문 실험 및 장비 개발 참여)</p>
-    <p>· KLPGA 프로골퍼 대상 스윙 분석 연구 학위논문</p>
-    <p>· TPI Korea 창립 멤버, 2014 World Golf Fitness Summit 한국 대표 참가</p>
-    <p>· 리베라CC 골프 트레이닝 센터, TPI Korea와 함께 운영 경험</p>
-    <p>· KPGA · KLPGA 프로골퍼 다수 트레이닝</p>
-  </div>
-</section>
-
-<section>
-  <span class="emphasize">그래서 운동을 배우기 전에는</span>
-  <p class="point-color" style="font-size:24px;">가격보다 먼저,</p>
-  <p>
-    그 강사가 얼마나 공부했는지,<br>
-    얼마나 많은 현장 경험이 있는지,<br>
-    얼마나 다양한 몸을 다뤄봤는지를 확인해야 합니다.
-  </p>
-
-  <h2 style="border:none; padding-left:0; margin-top:50px;">운동도 과외와 같습니다.</h2>
-  <p class="emphasize">강사의 학력, 자격, 경력은 절대 가볍게 볼 요소가 아닙니다.</p>
-
-  <p>
-    운동을 배우기로 결정했다면 가장 저렴한 곳을 찾을 게 아니라,<br>
-    회원의 신체 상태를 과학적으로 평가하고,<br>
-    그 결과를 바탕으로 맞춤형 운동 처방과 지속적인 피드백을 제공할 수 있는 사람을 찾아야 합니다.
   </p>
 </section>
 
