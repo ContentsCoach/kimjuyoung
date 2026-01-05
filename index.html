@@ -1,144 +1,256 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>김주영 코치 - 생체역학 PT</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
-            background: #0f0f12;
-            color: #fff;
-            line-height: 1.7;
-            word-break: keep-all;
-        }
-        .container {
-            max-width: 720px;
-            margin: 0 auto;
-            padding: 60px 20px 100px;
-        }
-        section { margin-bottom: 120px; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>김주영 코치 전문성 확인하기</title>
 
-        /* [헤드라인] 사진처럼 압도적인 크기와 위계 */
-        h1 { font-size: 38px; line-height: 1.3; margin-bottom: 40px; font-weight: 900; letter-spacing: -1px; }
-        h2 { font-size: 28px; margin-bottom: 30px; font-weight: 800; color: #fff; border-left: 4px solid #00ff95; padding-left: 15px; }
+<style>
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;
+  background:#0f0f12;
+  color:#fff;
+  line-height:1.7;
+  word-break: keep-all;
+}
+.container{
+  max-width:720px;
+  margin:0 auto;
+  padding:60px 20px 100px;
+}
+section{margin-bottom:120px}
 
-        p { font-size: 18px; color: #aaa; margin-bottom: 24px; font-weight: 400; }
-        .emphasize { color: #fff; font-weight: 700; font-size: 20px; margin-bottom: 24px; display: block; }
-        .point-color { color: #00ff95; font-weight: 900; }
+h1{font-size:32px; line-height:1.4; margin-bottom:40px; font-weight:900; letter-spacing: -1px;}
+h2{font-size:26px; margin-bottom:30px; font-weight:800; color:#fff; border-left:4px solid #00ff95; padding-left:15px;}
 
-        /* [상단 태그] */
-        .badge {
-            display: inline-block;
-            font-size: 14px;
-            font-weight: 700;
-            padding: 6px 16px;
-            background: #00ff95;
-            border-radius: 4px;
-            margin-bottom: 20px;
-            color: #000;
-        }
+p{font-size:18px; color:#aaa; margin-bottom:24px; font-weight: 400;}
+.emphasize{color:#fff; font-weight:700; font-size:20px; margin-bottom:24px; display: block;}
+.point-color{color:#00ff95; font-weight:900;}
 
-        /* [버튼/CTA] */
-        .ctaRow { display: flex; flex-direction: column; gap: 12px; margin-top: 40px; }
-        .cta {
-            text-align: center;
-            padding: 22px;
-            background: #00ff95;
-            color: #000;
-            font-weight: 800;
-            font-size: 20px;
-            border-radius: 12px;
-            text-decoration: none;
-        }
-        .cta.alt { background: #1a1a1e; color: #00ff95; border: 1px solid #00ff95; }
+.badge{
+  display:inline-block;
+  font-size:14px;
+  font-weight:700;
+  padding:6px 16px;
+  background:#00ff95;
+  border-radius:4px;
+  margin-bottom:20px;
+  color:#000;
+}
 
-        /* [경력 카드화 디자인] */
-        .career-container { display: flex; flex-direction: column; gap: 15px; }
-        .career-card {
-            background: #1a1a1e;
-            padding: 22px;
-            border-radius: 12px;
-            border-left: 4px solid #00ff95;
-        }
-        .career-card .card-title {
-            display: block;
-            font-size: 20px;
-            font-weight: 800;
-            color: #fff;
-            margin-bottom: 4px;
-            line-height: 1.4;
-        }
-        .career-card .card-sub { display: block; font-size: 14px; color: #888; }
+.ctaRow{
+  display:flex;
+  flex-direction: column;
+  gap:12px;
+  margin-top:40px;
+}
+.cta{
+  text-align:center;
+  padding:22px;
+  background:#00ff95;
+  color:#000;
+  font-weight:800;
+  font-size:20px;
+  border-radius:12px;
+  text-decoration:none;
+}
+.cta.alt{ background:#1a1a1e; color:#00ff95; border:1px solid #00ff95; }
 
-        .academic-list { margin-top: 25px; padding-left: 5px; }
-        .academic-list p { font-size: 16px; margin-bottom: 12px; color: #888; }
+/* 프로필 섹션 */
+.profile{
+  display:flex;
+  gap:25px;
+  align-items:center;
+  margin:40px 0;
+  padding:30px;
+  background:#1a1a1e;
+  border-radius:16px;
+  border: 1px solid #222;
+}
+.profile img{
+  width:140px;
+  height:140px;
+  border-radius:50%;
+  margin:0;
+  object-fit: cover;
+  border: 2px solid #00ff95;
+  flex-shrink: 0;
+}
+.profileName{ font-size:24px; font-weight:800; color:#fff; display:block; margin-bottom:6px; }
+.profileInfo{ font-size:16px; color:#888; line-height:1.5; }
 
-        /* [강조 박스] */
-        .highlight-box {
-            background: rgba(255,255,255,0.05);
-            padding: 40px 25px;
-            border-radius: 20px;
-            border: 1px dashed #444;
-            text-align: center;
-        }
+/* 경력 카드 스타일 */
+.career-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 30px;
+}
+.career-card {
+  background: #1a1a1e;
+  padding: 22px;
+  border-radius: 12px;
+  border-left: 4px solid #00ff95;
+}
+.career-card .card-title {
+  display: block;
+  font-size: 19px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 4px;
+}
+.career-card .card-sub {
+  display: block;
+  font-size: 14px;
+  color: #888;
+}
 
-        .footer { border-top: 1px solid #222; padding: 50px 0; font-size: 13px; color: #555; text-align: center; }
-    </style>
+.academic-list {
+  margin-top: 30px;
+  padding: 20px;
+  background: rgba(255,255,255,0.03);
+  border-radius: 16px;
+}
+.academic-list p {
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: #ccc;
+}
+
+.footer{
+  border-top:1px solid #222;
+  padding:50px 0;
+  font-size:13px;
+  color:#555;
+  text-align:center;
+}
+</style>
 </head>
 
 <body>
 <main class="container">
 
-<div class="badge">지금 PT 알아보고 계신 분 전용</div>
-
 <section>
-    <h1>
-        무엇이 다른지도 모른 채<br><br>
-        <span class="point-color">가격부터 묻고</span><br>
-        있지는 않습니까?
-    </h1>
-    
-    <span class="emphasize">
-        가장 싼 곳을 찾는 마음, 이해합니다.
-    </span>
-    
-    <span class="emphasize" style="font-size:24px;">
-        하지만 당신이 확인해야 할 건<br>가격이 아닌 <span class="point-color">'제대로 된 곳'</span>인지입니다.
-    </span>
+  <a href="#" class="cta" style="display:block; margin-bottom:50px;">김주영 코치 전문성 확인하기 ></a>
 
-    <p>
-        단순히 숫자 세어주고 자세만 잡아주는 사람이 필요한 게 아니라면,<br>
-        이번에는 정말로 '해답'을 주는 전문가를 만나야 합니다.
-    </p>
+  <p class="emphasize">
+    많은 사람들이 운동을 배우기 전<br>
+    가장 먼저 가격부터 비교합니다.
+  </p>
+  <p>
+    가장 저렴한 곳을 찾고,<br>
+    가장 쉽게 시작할 수 있는 곳을 고릅니다.
+  </p>
+  
+  <h1>
+    하지만 가격이 낮다는 건<br>
+    대부분 <span class="point-color">한 가지를 의미합니다.</span>
+  </h1>
+
+  <span class="emphasize" style="font-size:28px;">전문성이 낮다는 뜻입니다.</span>
+
+  <p>
+    운동도 마찬가지입니다.<br>
+    전문성이 낮을수록 가격을 낮춰야 하고,<br>
+    그만큼 결과를 만들 확률도 낮아집니다.<br>
+    그래서 열심히 했는데도 몸이 달라지지 않는 겁니다.
+  </p>
 </section>
 
 <section>
-    <h1>
-        운동 동작을 배우러 가지 마세요.<br>
-        <span class="point-color">움직임을 이해하러 가세요.</span>
-    </h1>
+  <span class="emphasize">우리는 이미 알고 있습니다.</span>
+  <p>
+    몸이 조금 아프면 동네 병원을 가지만,<br>
+    문제가 심각하다고 느껴지면 비용이 들더라도 대학병원을 선택합니다.
+  </p>
 
-    <span class="emphasize">
-        동작을 흉내 내는 것과 원리를 이해하는 건<br>차원이 다른 결과로 이어집니다.
-    </span>
+  <p class="emphasize" style="font-size:24px; border-bottom: 1px solid #333; padding-bottom: 20px;">
+    이유는 단순합니다.<br>
+    의사의 전문성이 다르고,<br>
+    경험이 다르고,<br>
+    판단의 깊이가 다르기 때문입니다.
+  </p>
 
-    <div class="highlight-box">
-        <h2 style="border:none; padding:0; text-align:center; font-size:24px; margin-bottom:20px;">
-            왜 내 몸이 아픈지<br>
-            <span class="point-color">구조로 증명해드립니다.</span>
-        </h2>
-        <p style="color:#ddd; font-size:16px;">
-            김주영 코치는 감각에 의존하지 않습니다.<br>
-            15년의 현장 경험과 생체역학 데이터를 통해<br>
-            정확한 원인과 해결책을 제시합니다.
-        </p>
+  <p class="emphasize" style="margin-top:30px;">
+    운동도 똑같습니다.<br>
+    어떤 운동을 배우느냐보다
+  </p>
+  
+  <h1 class="point-color">누구에게 배우느냐가 먼저입니다.</h1>
+
+  <div class="profile">
+    <img src="me.png" alt="김주영 코치">
+    <div class="profileText">
+      <span class="profileName">김주영 코치 | 재활 & 교정 전문가</span>
+      <span class="profileInfo">
+        한국체육대학교 학사·석사 (전공: Biomechanics, 생체역학)
+      </span>
     </div>
+  </div>
 </section>
 
-<section class="career-list">
-    <h2>김주영 코치 전문가 프로필</h2>
-    <div class="career-container">
-        <div class="career-card">
-            <span class="card-title">한체대 학사·석사 (운동역학
+<section>
+  <h2>주요 경력 및 연구 데이터</h2>
+  <div class="career-container">
+    <div class="career-card">
+      <span class="card-title">호텔신라 Advance Personal Trainer</span>
+      <span class="card-sub">상위 등급 퍼스널 트레이너</span>
+    </div>
+    <div class="career-card">
+      <span class="card-title">삼성엔지니어링 · 삼성물산 전담 트레이닝</span>
+      <span class="card-sub">부사장 · 전무 · 상무 전담</span>
+    </div>
+    <div class="career-card">
+      <span class="card-title">15년간 3,000명 이상의 현장 경험</span>
+      <span class="card-sub">연구 데이터 융합 통증 관리 · 재활 운동 · 체형 교정 결과 증명</span>
+    </div>
+  </div>
+
+  <div class="academic-list">
+    <p>· 한국체육대학교 Motion Innovation Center 연구보조 (보행·러닝·무선 족저압 인솔 관련 논문 실험 및 장비 개발 참여)</p>
+    <p>· KLPGA 프로골퍼 대상 스윙 분석 연구 학위논문</p>
+    <p>· TPI Korea 창립 멤버, 2014 World Golf Fitness Summit 한국 대표 참가</p>
+    <p>· 리베라CC 골프 트레이닝 센터, TPI Korea와 함께 운영 경험</p>
+    <p>· KPGA · KLPGA 프로골퍼 다수 트레이닝</p>
+  </div>
+</section>
+
+<section>
+  <span class="emphasize">그래서 운동을 배우기 전에는</span>
+  <p class="point-color" style="font-size:24px;">가격보다 먼저,</p>
+  <p>
+    그 강사가 얼마나 공부했는지,<br>
+    얼마나 많은 현장 경험이 있는지,<br>
+    얼마나 다양한 몸을 다뤄봤는지를 확인해야 합니다.
+  </p>
+
+  <h2 style="border:none; padding-left:0; margin-top:50px;">운동도 과외와 같습니다.</h2>
+  <p class="emphasize">강사의 학력, 자격, 경력은 절대 가볍게 볼 요소가 아닙니다.</p>
+
+  <p>
+    운동을 배우기로 결정했다면 가장 저렴한 곳을 찾을 게 아니라,<br>
+    회원의 신체 상태를 과학적으로 평가하고,<br>
+    그 결과를 바탕으로 맞춤형 운동 처방과 지속적인 피드백을 제공할 수 있는 사람을 찾아야 합니다.
+  </p>
+</section>
+
+<section style="background: rgba(0,255,149,0.05); padding: 40px; border-radius: 20px; border: 1px solid #222; text-align: center;">
+  <p class="emphasize" style="margin-bottom:0;">
+    오늘 이 글을 여기까지 읽으셨다면,<br><br>
+    전문성이 낮은 선택으로<br>
+    당신의 시간과 돈을 잃는 일만큼은 없었으면 합니다.
+  </p>
+</section>
+
+<div class="ctaRow">
+  <a href="tel:01000000000" class="cta">전문가에게 직접 문의하기</a>
+</div>
+
+<footer class="footer">
+  © 김주영 코치. All rights reserved.
+</footer>
+
+</main>
+</body>
+</html>
