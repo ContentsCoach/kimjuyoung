@@ -12,12 +12,21 @@
             font-family: 'Pretendard', sans-serif; 
             margin: 0; 
             padding: 0; 
-            line-height: 1.2; 
+            line-height: 1.25; 
             word-break: keep-all; 
         }
-        .container { max-width: 450px; margin: 0 auto; padding: 60px 24px; }
+        .container { max-width: 450px; margin: 0 auto; padding: 0 24px; }
         
-        /* 1. 상단 버튼 (전문가 신뢰도) */
+        /* 스크롤 여백 최적화 */
+        .section { 
+            min-height: 80vh; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            padding: 100px 0;
+        }
+        
+        /* 상단 버튼 */
         .intro-btn { 
             display: inline-block; 
             background-color: #00FF7F; 
@@ -25,113 +34,89 @@
             padding: 12px 20px; 
             font-weight: 900; 
             font-size: 16px; 
-            margin-bottom: 80px; 
+            margin-bottom: 40px; 
             border-radius: 4px;
-            letter-spacing: -0.5px;
+            text-decoration: none;
         }
 
-        /* 2. 대상 특정 (Targeting) - 눈에 확 띄는 크기 */
-        .target {
-            font-size: 28px;
-            font-weight: 900;
-            color: #00FF7F;
-            margin-bottom: 20px;
-            display: block;
-            letter-spacing: -1px;
-        }
-
-        /* 3. 메인 카피 (Hero Copy) - 한 화면을 장악하는 크기 */
-        h1 { 
-            font-size: 42px; 
-            font-weight: 900; 
-            margin: 0 0 40px 0; 
-            letter-spacing: -2px; 
-            line-height: 1.1;
-        }
-
+        /* 텍스트 스타일 위계 */
+        .target-text { font-size: 26px; font-weight: 900; color: #fff; margin-bottom: 20px; letter-spacing: -1px; }
+        h1 { font-size: 44px; font-weight: 900; margin: 0; letter-spacing: -2px; line-height: 1.15; }
         .highlight { color: #00FF7F; }
         
-        /* 4. 섹션 구분 (Space) - 의도적인 큰 공백으로 집중도 상승 */
-        .section-spacer { height: 120px; }
-
-        /* 5. 본문 (Body) - 굵고 짧은 호흡 */
-        p { 
-            font-size: 24px; 
-            font-weight: 800; 
-            margin: 0 0 24px 0; 
-            color: #fff; 
-            letter-spacing: -1px;
-        }
-
-        .small { 
-            font-size: 19px; 
-            color: #666; 
-            font-weight: 500;
-            margin-bottom: 16px; 
-            display: block;
-        }
-
-        /* 6. 증명 (Proof) - 박스 디자인으로 시선 고정 */
+        p { font-size: 24px; font-weight: 800; margin: 12px 0; color: #eee; letter-spacing: -0.8px; }
+        .small { font-size: 19px; color: #666; font-weight: 500; margin-bottom: 16px; display: block; }
+        
+        /* 포인트 박스 (경력용) */
         .proof-box {
-            background-color: #111;
-            padding: 30px 20px;
             border-left: 6px solid #00FF7F;
+            padding-left: 20px;
             margin: 40px 0;
         }
-        
-        .proof-title {
-            color: #00FF7F;
-            font-size: 18px;
-            font-weight: 900;
-            margin-bottom: 10px;
-            display: block;
-        }
+
+        .line { height: 1px; background-color: #222; width: 100%; margin: 40px 0; }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <div class="intro-btn">김주영코치 소개 ></div>
+    <section class="section">
+        <div class="intro-btn">김주영코치 소개 ></div>
+        <span class="target-text">제대로 된 PT를<br>찾고 있는 사람에게,</span>
+        <h1>무엇이 다른지도<br>모른 채</h1>
+        <h1 class="highlight" style="font-size: 55px; margin-top:20px;">가격부터</h1>
+        <h1>묻고 있지는<br>않습니까?</h1>
+    </section>
 
-    <span class="target">제대로 된 PT를<br>찾고 있는 당신에게,</span>
-    
-    <h1>무엇이 다른지도 모른 채<br>
-    <span class="highlight">가격부터 묻고</span><br>
-    있지는 않습니까?</h1>
-    
-    <div class="section-spacer"></div>
+    <section class="section">
+        <span class="small">가장 싼 곳을 찾는 마음, 이해합니다.</span>
+        <p>하지만 단순히<br>숫자만 세어주고</p>
+        <p>자세만 잡아주는 사람이<br>필요한 게 아니라면,</p>
+        <div class="line"></div>
+        <p>당신이 먼저 확인해야 할 건<br><span class="highlight">가격이 아닙니다.</span></p>
+        <p>제대로 배울 수 있는 곳인지<br>확인하는 것입니다.</p>
+    </section>
 
-    <span class="small">가장 싼 곳을 찾는 마음, 이해합니다.</span>
-    <p>하지만 단순히<br>숫자만 세어주는 사람이 아니라,</p>
-    <p><span class="highlight">내 몸을 바꿀 진짜 전문가</span>를<br>찾고 있다면</p>
-    <p>지금 확인해야 할 건<br>가격이 아닙니다.</p>
+    <section class="section">
+        <p>운동 동작을<br><span style="text-decoration: line-through; color:#555;">배우러 가지 마세요.</span></p>
+        <h1 class="highlight">움직임을<br>이해하러 가세요.</h1>
+    </section>
 
-    <div class="section-spacer"></div>
+    <section class="section">
+        <p>동작은 누구나<br>흉내 낼 수 있습니다.</p>
+        <p>하지만 움직임을<br>이해하지 않으면</p>
+        <p class="highlight" style="font-size: 28px;">PT를 받아도 혼자서는<br>아무것도 할 수 없습니다.</p>
+    </section>
 
-    <h1>운동 동작이 아니라<br>
-    <span class="highlight">'움직임의 원리'</span>를<br>
-    이해하러 오세요.</h1>
-    
-    <p>동작을 흉내 내는 것과<br>원리를 깨닫는 것은</p>
-    <p style="font-size: 30px; color: #00FF7F;">차원이 다른 결과로<br>이어집니다.</p>
+    <section class="section">
+        <div class="proof-box">
+            <p>한체대 학사·석사<br>생체역학 전공</p>
+            <p>현장 15년,<br>3,000명의 데이터 분석</p>
+        </div>
+        <p>김주영 코치는<br>감각으로 가르치지 않습니다.</p>
+    </section>
 
-    <div class="section-spacer"></div>
+    <section class="section">
+        <h1>운동을 시작해도<br>되는 몸인지부터<br><span class="highlight">판단합니다.</span></h1>
+    </section>
 
-    <div class="proof-box">
-        <span class="proof-title">CERTIFIED EXPERT</span>
-        <p style="margin:0;">한체대 생체역학 전공<br>15년 데이터, 3,000명 분석</p>
-    </div>
-    
-    <p>김주영 코치는<br>감각으로 가르치지 않습니다.</p>
-    <p><span class="highlight">당신이 아픈 원인을<br>'구조'로 증명합니다.</span></p>
+    <section class="section">
+        <span class="small">단순히 횟수 세고<br>자세만 잡아주는 트레이너는</span>
+        <h1 style="color: #444;">널렸습니다.</h1>
+    </section>
 
-    <div class="section-spacer"></div>
+    <section class="section">
+        <p>내 몸의 불균형이<br>어디서 시작됐는지,</p>
+        <p>어떤 원리로<br>움직여야 하는지.</p>
+        <div class="line"></div>
+        <h1>생체역학으로<br>진짜 <span class="highlight">‘해답’</span>을<br>제시합니다.</h1>
+    </section>
 
-    <span class="small">결국 확실한 대안은 하나뿐입니다.</span>
-    <h1>당신의 마지막 PT,<br>
-    <span class="highlight">해답은 생체역학입니다.</span></h1>
-    
-    <p>가장 확실한 대안이<br>되어드리겠습니다.</p>
+    <section class="section">
+        <p class="small">이런 기준으로 가르치는 곳은<br>생각보다 많지 않습니다.</p>
+        <p>제대로 된 곳을 찾는 분들에게,</p>
+        <h1 class="highlight">가장 확실한 대안이<br>됩니다.</h1>
+    </section>
 </div>
 
 </body>
