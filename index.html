@@ -11,113 +11,127 @@
             color: #fff; 
             font-family: 'Pretendard', sans-serif; 
             margin: 0; 
-            padding: 20px 24px 100px 24px; 
-            line-height: 1.4; 
+            padding: 0; 
+            line-height: 1.2; 
             word-break: keep-all; 
         }
-        .container { max-width: 450px; margin: 0 auto; }
+        .container { max-width: 450px; margin: 0 auto; padding: 60px 24px; }
         
+        /* 1. 상단 버튼 (전문가 신뢰도) */
         .intro-btn { 
             display: inline-block; 
             background-color: #00FF7F; 
             color: #000; 
-            padding: 8px 16px; 
+            padding: 12px 20px; 
             font-weight: 900; 
-            font-size: 15px; 
-            margin-bottom: 50px; 
-            border-radius: 2px;
+            font-size: 16px; 
+            margin-bottom: 80px; 
+            border-radius: 4px;
+            letter-spacing: -0.5px;
         }
 
+        /* 2. 대상 특정 (Targeting) - 눈에 확 띄는 크기 */
+        .target {
+            font-size: 28px;
+            font-weight: 900;
+            color: #00FF7F;
+            margin-bottom: 20px;
+            display: block;
+            letter-spacing: -1px;
+        }
+
+        /* 3. 메인 카피 (Hero Copy) - 한 화면을 장악하는 크기 */
         h1 { 
-            font-size: 36px; 
+            font-size: 42px; 
             font-weight: 900; 
-            margin: 0 0 32px 0; 
-            letter-spacing: -1.8px; 
-            line-height: 1.25;
+            margin: 0 0 40px 0; 
+            letter-spacing: -2px; 
+            line-height: 1.1;
         }
 
         .highlight { color: #00FF7F; }
         
-        .line { 
-            height: 1px; 
-            background-color: #222; 
-            margin: 80px 0; 
-        }
+        /* 4. 섹션 구분 (Space) - 의도적인 큰 공백으로 집중도 상승 */
+        .section-spacer { height: 120px; }
 
+        /* 5. 본문 (Body) - 굵고 짧은 호흡 */
         p { 
-            font-size: 22px; 
-            font-weight: 700; 
-            margin: 0 0 20px 0; 
+            font-size: 24px; 
+            font-weight: 800; 
+            margin: 0 0 24px 0; 
             color: #fff; 
+            letter-spacing: -1px;
         }
 
         .small { 
-            font-size: 18px; 
-            color: #888; 
-            font-weight: 400;
-            margin-bottom: 12px; 
+            font-size: 19px; 
+            color: #666; 
+            font-weight: 500;
+            margin-bottom: 16px; 
+            display: block;
+        }
+
+        /* 6. 증명 (Proof) - 박스 디자인으로 시선 고정 */
+        .proof-box {
+            background-color: #111;
+            padding: 30px 20px;
+            border-left: 6px solid #00FF7F;
+            margin: 40px 0;
         }
         
-        .point-text {
-            font-size: 26px;
-            font-weight: 900;
+        .proof-title {
             color: #00FF7F;
+            font-size: 18px;
+            font-weight: 900;
+            margin-bottom: 10px;
             display: block;
-            margin: 10px 0;
-            line-height: 1.3;
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <div class="intro-btn">김주영코치 소개</div>
+    <div class="intro-btn">김주영코치 소개 ></div>
 
-    <p class="small">지금,</p>
-    <h1>어디서 PT를 받아야 할지<br>찾고 계신가요?</h1>
+    <span class="target">제대로 된 PT를<br>찾고 있는 당신에게,</span>
     
-    <h1>무엇이 다른지도 모른 채<br><span class="highlight">가격부터 묻고</span><br>있지는 않습니까?</h1>
+    <h1>무엇이 다른지도 모른 채<br>
+    <span class="highlight">가격부터 묻고</span><br>
+    있지는 않습니까?</h1>
     
-    <p class="small">가장 싼 곳을 찾는 마음, 이해합니다.</p>
-    <p>하지만 그 선택으로<br>같은 문제를 다시 반복해왔다는 것도</p>
-    <p class="point-text">이미 알고 계실 겁니다.</p>
+    <div class="section-spacer"></div>
 
-    <div class="line"></div>
+    <span class="small">가장 싼 곳을 찾는 마음, 이해합니다.</span>
+    <p>하지만 단순히<br>숫자만 세어주는 사람이 아니라,</p>
+    <p><span class="highlight">내 몸을 바꿀 진짜 전문가</span>를<br>찾고 있다면</p>
+    <p>지금 확인해야 할 건<br>가격이 아닙니다.</p>
 
-    <p>단순히 숫자 세어주고<br>자세만 잡아주는 사람이<br>필요한 게 아니라면,</p>
+    <div class="section-spacer"></div>
+
+    <h1>운동 동작이 아니라<br>
+    <span class="highlight">'움직임의 원리'</span>를<br>
+    이해하러 오세요.</h1>
     
-    <p>당신이 먼저 확인해야 할 건<br>가격이 아닙니다.</p>
-    <p class="point-text" style="color:#fff;">이번엔 정말로<br><span class="highlight">배울 수 있는 곳인지</span>입니다.</p>
+    <p>동작을 흉내 내는 것과<br>원리를 깨닫는 것은</p>
+    <p style="font-size: 30px; color: #00FF7F;">차원이 다른 결과로<br>이어집니다.</p>
 
-    <div class="line"></div>
+    <div class="section-spacer"></div>
 
-    <h1>운동 동작을<br>배우러 가지 마세요.<br><span class="highlight">움직임을 이해하러 가세요.</span></h1>
+    <div class="proof-box">
+        <span class="proof-title">CERTIFIED EXPERT</span>
+        <p style="margin:0;">한체대 생체역학 전공<br>15년 데이터, 3,000명 분석</p>
+    </div>
     
-    <p>동작은 따라 할 수 있습니다.</p>
-    <p>하지만 움직임은<br><span class="highlight">이해하지 않으면 절대 바뀌지 않습니다.</span></p>
+    <p>김주영 코치는<br>감각으로 가르치지 않습니다.</p>
+    <p><span class="highlight">당신이 아픈 원인을<br>'구조'로 증명합니다.</span></p>
 
-    <div class="line"></div>
+    <div class="section-spacer"></div>
 
-    <p class="small">김주영 코치는</p>
-    <p>한국체육대학교 학사·석사<br>생체역학 전공,</p>
-    <p>현장 15년 동안<br>3,000명 이상의 움직임 데이터를<br>직접 분석해온 사람입니다.</p>
+    <span class="small">결국 확실한 대안은 하나뿐입니다.</span>
+    <h1>당신의 마지막 PT,<br>
+    <span class="highlight">해답은 생체역학입니다.</span></h1>
     
-    <p>“왜 내 몸이 아픈지” 그 원인을<br>감각이 아니라<br><span class="highlight">구조로 설명해온 사람</span>입니다.</p>
-
-    <div class="line"></div>
-
-    <p>그래서 김주영 코치는<br>단순히 횟수 세고 자세만 잡아주는<br>트레이너가 아닙니다.</p>
-    
-    <p>내 몸의 불균형이 어디서 시작됐는지,<br>어떤 원리로 움직여야 하는지.</p>
-    
-    <p class="point-text">다시 돌아가지 않게 만드는<br><span style="color:#fff;">유일한 기준</span>을 세워드립니다.</p>
-    <p class="point-text">생체역학으로<br>당신 몸의 <span style="color:#fff;">문제를 종결</span>합니다.</p>
-
-    <div class="line"></div>
-
-    <p class="small">이런 기준으로 가르칠 수 있는 곳은 많지 않습니다.</p>
-    
-    <h1>그래서<br>제대로 된 곳을 찾는 분들에게<br>김주영 코치는<br><span class="highlight">‘가장 확실한 대안’</span>이 됩니다.</h1>
+    <p>가장 확실한 대안이<br>되어드리겠습니다.</p>
 </div>
 
 </body>
