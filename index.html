@@ -1,150 +1,319 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>김주영 코치 | 재활·교정·퍼포먼스 전문가</title>
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
-    <style>
-        :root {
-            --bg-black: #000000;
-            --card-bg: #111111;
-            --point-green: #00ff7f;
-            --text-white: #FFFFFF;
-            --text-grey: #A0A0A0;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>김주영 코치 | 재활·교정·퍼포먼스 전문가</title>
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
+  <style>
+    :root {
+      --bg-black: #000000;
+      --card-bg: #111111;
+      --point-green: #00ff7f;
+      --text-white: #ffffff;
+      --text-grey: #dddddd;
+    }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Pretendard', sans-serif; -webkit-font-smoothing: antialiased; }
-        body { background-color: var(--bg-black); color: var(--text-white); line-height: 1.6; word-break: keep-all; -webkit-text-size-adjust: none; }
-        .container { max-width: 600px; margin: 0 auto; padding: 0 20px; }
-        
-        /* 섹션 간 가로줄(border-bottom) 제거 및 여백 조정 */
-        section { padding: 100px 0; border-bottom: none; }
-        .point-text { color: var(--point-green); font-weight: 700; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Pretendard', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
 
-        /* 1. 히어로 섹션 */
-        .hero { min-height: 85vh; display: flex; flex-direction: column; justify-content: center; text-align: center; }
-        .hero h1 { font-size: 2.3rem; font-weight: 800; margin-bottom: 30px; line-height: 1.4; letter-spacing: -1px; }
-        .hero p { font-size: 1.15rem; color: var(--text-grey); line-height: 1.8; }
-        .hero strong { color: #fff; font-weight: 600; }
+    body {
+      background-color: var(--bg-black);
+      color: var(--text-white);
+      line-height: 1.75;
+      word-break: keep-all;
+      -webkit-text-size-adjust: none;
+      font-size: 1.05rem;
+    }
 
-        /* 2. 프로필 섹션 */
-        .profile-img { width: 100%; border-radius: 12px; margin-bottom: 35px; border: 1px solid #222; }
-        .profile-name { font-size: 2.1rem; font-weight: 800; margin-bottom: 8px; text-align: center; }
-        .profile-tag { color: var(--point-green); font-size: 1.15rem; font-weight: 600; margin-bottom: 45px; text-align: center; }
-        
-        .info-card { background: var(--card-bg); padding: 32px 25px; border-radius: 16px; margin-bottom: 24px; border: 1px solid #1a1a1a; }
-        .info-card h3 { font-size: 1.35rem; color: var(--point-green); margin-bottom: 22px; display: flex; align-items: center; }
-        .info-card h3::before { content: ""; width: 4px; height: 18px; background: var(--point-green); margin-right: 12px; border-radius: 2px; }
-        .info-card ul { list-style: none; }
-        .info-card li { font-size: 1.05rem; color: var(--text-grey); margin-bottom: 14px; line-height: 1.5; padding-left: 15px; position: relative; }
-        .info-card li::after { content: ""; position: absolute; left: 0; top: 10px; width: 4px; height: 4px; background: #555; border-radius: 50%; }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-        /* 3. 프로세스 섹션 */
-        .step-title { font-size: 1.9rem; font-weight: 800; text-align: center; margin-bottom: 50px; line-height: 1.4; }
-        .step-item { background: linear-gradient(145deg, #151515, #0a0a0a); padding: 45px 25px; border-radius: 20px; margin-bottom: 20px; border: 1px solid #1a1a1a; text-align: center; }
-        .step-item.active { border: 1px solid var(--point-green); box-shadow: 0 10px 40px rgba(0, 255, 127, 0.08); }
-        .step-label { font-size: 1.45rem; font-weight: 800; color: var(--point-green); margin-bottom: 15px; display: block; }
-        .step-desc { color: var(--text-grey); font-size: 1.05rem; line-height: 1.7; }
+    section {
+      padding: 100px 0;
+      border-bottom: none;
+    }
 
-        /* 4. 클로징 섹션 */
-        .cta { text-align: center; padding-bottom: 140px; }
-        .cta h2 { font-size: 1.9rem; margin-bottom: 25px; font-weight: 800; line-height: 1.4; }
-        .cta-desc { color: var(--text-grey); margin-bottom: 50px; font-size: 1.1rem; line-height: 1.8; }
-        
-        .cta-button { 
-            display: block; background: var(--point-green); color: #000; padding: 22px; 
-            border-radius: 14px; font-size: 1.35rem; font-weight: 800; text-decoration: none; 
-            box-shadow: 0 10px 25px rgba(0, 255, 127, 0.2); transition: 0.3s;
-        }
-        .cta-button:active { transform: scale(0.96); }
-        .notice { font-size: 0.95rem; color: #555; margin-top: 30px; font-weight: 500; }
+    .point-text {
+      color: var(--point-green);
+      font-weight: 700;
+    }
 
-        footer { text-align: center; padding: 50px 0; font-size: 0.85rem; color: #333; }
+    .hero {
+      min-height: 85vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
 
-        /* 모바일 대응 미세 조정 */
-        @media (max-width: 380px) {
-            .hero h1 { font-size: 2rem; }
-            .step-title { font-size: 1.6rem; }
-            .cta h2 { font-size: 1.6rem; }
-        }
-    </style>
+    .hero h1 {
+      font-size: 2.3rem;
+      font-weight: 800;
+      margin-bottom: 30px;
+      line-height: 1.5;
+      letter-spacing: -0.5px;
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      color: var(--text-grey);
+      line-height: 1.85;
+    }
+
+    .hero strong {
+      color: #fff;
+      font-weight: 700;
+    }
+
+    .profile-img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 35px;
+      border: 1px solid #222;
+    }
+
+    .profile-name {
+      font-size: 2.1rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+
+    .profile-tag {
+      color: var(--point-green);
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 45px;
+      text-align: center;
+    }
+
+    .info-card {
+      background: var(--card-bg);
+      padding: 32px 25px;
+      border-radius: 16px;
+      margin-bottom: 24px;
+      border: 1px solid #1a1a1a;
+    }
+
+    .info-card h3 {
+      font-size: 1.35rem;
+      color: var(--point-green);
+      margin-bottom: 22px;
+      display: flex;
+      align-items: center;
+    }
+
+    .info-card h3::before {
+      content: "";
+      width: 4px;
+      height: 18px;
+      background: var(--point-green);
+      margin-right: 12px;
+      border-radius: 2px;
+    }
+
+    .info-card ul {
+      list-style: none;
+    }
+
+    .info-card li {
+      font-size: 1.05rem;
+      color: var(--text-grey);
+      margin-bottom: 14px;
+      line-height: 1.7;
+      padding-left: 15px;
+      position: relative;
+    }
+
+    .info-card li::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 4px;
+      height: 4px;
+      background: #555;
+      border-radius: 50%;
+    }
+
+    .step-title {
+      font-size: 1.9rem;
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 50px;
+      line-height: 1.5;
+    }
+
+    .step-item {
+      background: linear-gradient(145deg, #151515, #0a0a0a);
+      padding: 45px 25px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+      border: 1px solid #1a1a1a;
+      text-align: center;
+    }
+
+    .step-item.active {
+      border: 1px solid var(--point-green);
+      box-shadow: 0 10px 40px rgba(0, 255, 127, 0.08);
+    }
+
+    .step-label {
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: var(--point-green);
+      margin-bottom: 15px;
+      display: block;
+    }
+
+    .step-desc {
+      color: var(--text-grey);
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    .cta {
+      text-align: center;
+      padding-bottom: 140px;
+    }
+
+    .cta h2 {
+      font-size: 1.9rem;
+      margin-bottom: 25px;
+      font-weight: 800;
+      line-height: 1.5;
+    }
+
+    .cta-desc {
+      color: var(--text-grey);
+      margin-bottom: 50px;
+      font-size: 1.1rem;
+      line-height: 1.85;
+    }
+
+    .cta-button {
+      display: block;
+      background: var(--point-green);
+      color: #000;
+      padding: 22px;
+      border-radius: 14px;
+      font-size: 1.35rem;
+      font-weight: 800;
+      text-decoration: none;
+      box-shadow: 0 10px 25px rgba(0, 255, 127, 0.2);
+      transition: 0.3s;
+    }
+
+    .cta-button:active {
+      transform: scale(0.96);
+    }
+
+    .notice {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 30px;
+      font-weight: 500;
+    }
+
+    footer {
+      text-align: center;
+      padding: 50px 0;
+      font-size: 0.85rem;
+      color: #333;
+    }
+
+    @media (max-width: 380px) {
+      .hero h1,
+      .cta h2,
+      .step-title {
+        font-size: 1.75rem;
+      }
+    }
+  </style>
 </head>
 <body>
+  <div class="container">
+    <section class="hero">
+      <h1>저렴한 PT를 찾으십니까,<br><span class="point-text">아니면 확실한 결과를<br>찾으십니까?</span></h1>
+      <p>
+        많은 사람들이 당장의 낮은 결제 금액에 현혹됩니다.<br />
+        하지만 <strong>저렴한 PT가 사실 가장 비싼 PT입니다.</strong><br /><br />
+        전문성 없는 지도에 지불한 비용,<br />
+        나아지지 않는 몸 때문에 버려진 시간,<br />
+        망가진 몸을 되돌리기 위한 기회비용까지.<br /><br />
+        당신의 소중한 <strong>시간과 비용을 낭비하지 마세요.</strong>
+      </p>
+    </section>
 
-    <div class="container">
-        <section class="hero">
-            <h1>저렴한 PT를 찾으십니까,<br><span class="point-text">아니면 확실한 결과를<br>찾으십니까?</span></h1>
-            <p>
-                많은 사람들이 당장의 낮은 결제 금액에 현혹됩니다.<br>
-                하지만 <strong>저렴한 PT가 사실 가장 비싼 PT입니다.</strong><br><br>
-                전문성 없는 지도에 지불한 비용,<br>나아지지 않는 몸 때문에 버려진 시간,<br>
-                망가진 몸을 되돌리기 위한 기회비용까지.<br><br>
-                당신의 소중한 <strong>시간과 비용을 낭비하지 마세요.</strong>
-            </p>
-        </section>
+    <section>
+      <img src="me.png" class="profile-img" alt="김주영 코치" />
+      <h2 class="profile-name">김주영 코치</h2>
+      <p class="profile-tag">재활 · 교정 · 퍼포먼스 전문가</p>
 
-        <section>
-            <img src="me.png" class="profile-img" alt="김주영 코치">
-            <h2 class="profile-name">김주영 코치</h2>
-            <p class="profile-tag">재활 · 교정 · 퍼포먼스 전문가</p>
-            
-            <div class="info-card">
-                <h3>학력 및 연구</h3>
-                <ul>
-                    <li>한국체육대학교 학사·석사 (운동역학 전공)</li>
-                    <li>한체대 Motion Innovation Center 연구보조</li>
-                    <li>보행·러닝·족저압 분석 연구 및 장비 개발 참여</li>
-                    <li>KLPGA 프로골퍼 스윙 분석 연구 학위논문</li>
-                </ul>
-            </div>
+      <div class="info-card">
+        <h3>학력 및 연구</h3>
+        <ul>
+          <li>한국체육대학교 학사·석사 (운동역학 전공)</li>
+          <li>한체대 Motion Innovation Center 연구보조</li>
+          <li>보행·러닝·족저압 분석 연구 및 장비 개발 참여</li>
+          <li>KLPGA 프로골퍼 스윙 분석 연구 학위논문</li>
+        </ul>
+      </div>
 
-            <div class="info-card">
-                <h3>주요 경력</h3>
-                <ul>
-                    <li>15년간 KPGA·KLPGA 프로 및 임원 전담</li>
-                    <li>삼성 임원(부사장·전무 등) 전담 트레이닝</li>
-                    <li>TPI Korea 창립 멤버</li>
-                    <li>World Golf Fitness Summit 한국 대표</li>
-                </ul>
-            </div>
-        </section>
+      <div class="info-card">
+        <h3>주요 경력</h3>
+        <ul>
+          <li>15년간 KPGA·KLPGA 프로 및 임원 전담</li>
+          <li>삼성 임원(부사장·전무 등) 전담 트레이닝</li>
+          <li>TPI Korea 창립 멤버</li>
+          <li>World Golf Fitness Summit 한국 대표</li>
+        </ul>
+      </div>
+    </section>
 
-        <section>
-            <h2 class="step-title">김주영 코치는<br><span class="point-text">운동부터 시키지 않습니다</span></h2>
-            
-            <div class="step-item">
-                <span class="step-label">평가 (Assessment)</span>
-                <p class="step-desc">역학적 움직임 분석을 통한<br>신체 데이터 정밀 스캔</p>
-            </div>
+    <section>
+      <h2 class="step-title">김주영 코치는<br /><span class="point-text">운동부터 시키지 않습니다</span></h2>
 
-            <div class="step-item active">
-                <span class="step-label">분석 (Analysis)</span>
-                <p class="step-desc">보상 작용 및 통증의<br>근본적인 역학 관계 도출</p>
-            </div>
+      <div class="step-item">
+        <span class="step-label">평가 (Assessment)</span>
+        <p class="step-desc">역학적 움직임 분석을 통한<br />신체 데이터 정밀 스캔</p>
+      </div>
 
-            <div class="step-item">
-                <span class="step-label">솔루션 (Solution)</span>
-                <p class="step-desc">신체 데이터 기반 맞춤 설계 및<br>정밀 피드백 제공</p>
-            </div>
-        </section>
+      <div class="step-item active">
+        <span class="step-label">분석 (Analysis)</span>
+        <p class="step-desc">보상 작용 및 통증의<br />근본적인 역학 관계 도출</p>
+      </div>
 
-        <section class="cta">
-            <h2>강사의 실력은 당신의<br><span class="point-text">'결과'를 결정짓는 지표입니다</span></h2>
-            <p class="cta-desc">
-                가장 저렴한 곳에서 헤매시겠습니까?<br>
-                아니면 전문가의 제대로 된 솔루션을 받으시겠습니까? <br><br>
-                <strong>누구에게 몸을 맡길지 반드시 확인하십시오.</strong>
-            </p>
-            
-            <a href="#" class="cta-button">김주영 코치에게 상담 받기</a>
-            <p class="notice">* 현재 상담 문의가 많아 순차적으로 안내드립니다.</p>
-        </section>
+      <div class="step-item">
+        <span class="step-label">솔루션 (Solution)</span>
+        <p class="step-desc">신체 데이터 기반 맞춤 설계 및<br />정밀 피드백 제공</p>
+      </div>
+    </section>
 
-        <footer>
-            &copy; 김주영 코치. All Rights Reserved.
-        </footer>
-    </div>
+    <section class="cta">
+      <h2>강사의 실력은 당신의<br /><span class="point-text">'결과'를 결정짓는 지표입니다</span></h2>
+      <p class="cta-desc">
+        가장 저렴한 곳에서 헤매시겠습니까?<br />
+        아니면 전문가의 제대로 된 솔루션을 받으시겠습니까? <br /><br />
+        <strong>누구에게 몸을 맡길지 반드시 확인하십시오.</strong>
+      </p>
 
+      <a href="#" class="cta-button">김주영 코치에게 상담 받기</a>
+      <p class="notice">* 현재 상담 문의가 많아 순차적으로 안내드립니다.</p>
+    </section>
+
+    <footer>
+      &copy; 김주영 코치. All Rights Reserved.
+    </footer>
+  </div>
 </body>
 </html>
