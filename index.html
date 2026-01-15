@@ -56,11 +56,12 @@ section{
   margin-bottom:40px;
 }
 
+/* 첫 번째 사진 본문 크기 상향 조정 */
 .hero p{
-  font-size:1.25rem;
+  font-size:1.4rem; /* 기존보다 크게 변경 */
   color:var(--sub);
   max-width:850px;
-  margin:0 auto;
+  margin:0 auto 24px; /* 문단 간격 추가 */
 }
 
 .hero strong{color:#fff}
@@ -172,11 +173,13 @@ section{
   margin-bottom:40px;
 }
 
+/* 두 번째 사진 본문 크기 상향 조정 */
 .cta-desc{
-  font-size:1.2rem;
+  font-size:1.4rem; 
   color:var(--sub);
   max-width:800px;
   margin:0 auto 60px;
+  line-height:1.8;
 }
 
 .cta-button{
@@ -204,16 +207,30 @@ footer{
   color:#777;
 }
 
-/* MOBILE */
+/* MOBILE - 이 부분이 모바일 화면에서의 크기를 결정합니다 */
 @media(max-width:768px){
   section{padding:100px 0}
   .hero{padding:140px 0}
   .hero h1{font-size:1.9rem}
-  .hero p{font-size:1.05rem}
+  
+  /* 첫 번째 사진 본문: 모바일에서 크게 보이도록 수정 */
+  .hero p{
+    font-size:1.15rem; 
+    line-height:1.7;
+    margin-bottom:20px;
+  }
+  
   .profile-grid{grid-template-columns:1fr}
   .philosophy h2{font-size:1.7rem}
   .process-grid{grid-template-columns:1fr}
   .cta h2{font-size:1.6rem}
+  
+  /* 두 번째 사진 본문: 모바일에서 크게 보이도록 수정 */
+  .cta-desc{
+    font-size:1.15rem; 
+    line-height:1.7;
+  }
+  
   .cta-button{width:100%; padding:22px 0}
 }
 </style>
@@ -315,6 +332,4 @@ footer{
 <footer>© 김주영 코치. All Rights Reserved.</footer>
 
 </body>
-</html> 
-
-
+</html>
