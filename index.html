@@ -3,13 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>김주영 코치 | 재활·교정·퍼포먼스 전문가</title>
+<title>김주영 코치 | 근골격계 통증 전문가</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
 
 <style>
 :root{
   --bg:#050505;
   --card:#0f0f0f;
+  --line:#1c1c1c;
   --blue:#2f7cff;
   --text:#ffffff;
   --sub:#cfcfcf;
@@ -20,317 +21,281 @@
   padding:0;
   box-sizing:border-box;
   font-family:'Pretendard',sans-serif;
-  -webkit-font-smoothing:antialiased;
 }
 
 body{
   background:var(--bg);
   color:var(--text);
-  line-height:1.8;
+  line-height:1.9;
   word-break:keep-all;
 }
 
 .container{
-  max-width:1000px;
+  max-width:980px;
   margin:0 auto;
   padding:0 24px;
+  text-align:center; /* 모든 설명 글 중앙 정렬 */
 }
 
+/* 섹션 간격 크게 */
 section{
-  padding:140px 0;
+  padding:240px 0;
 }
 
-.point-text{color:var(--blue); font-weight:700}
-
-/* HERO */
-.hero{
-  text-align:center;
-  padding-top:180px;
-  padding-bottom:180px;
+/* 모바일 */
+@media(max-width:768px){
+  section{padding:170px 0}
 }
 
-.hero h1{
+h1,h2,h3{letter-spacing:-0.02em}
+
+h1{
   font-size:2.8rem;
   font-weight:800;
   line-height:1.35;
+  margin-bottom:64px;
+}
+
+h2{
+  font-size:2.2rem;
+  margin-bottom:96px;
+}
+
+h3{
+  font-size:1.5rem;
   margin-bottom:40px;
+  color:var(--blue);
 }
 
-/* 첫 번째 사진 본문 크기 상향 조정 */
-.hero p{
-  font-size:1.4rem; /* 기존보다 크게 변경 */
+p{
+  font-size:1.25rem;
   color:var(--sub);
-  max-width:850px;
-  margin:0 auto 24px; /* 문단 간격 추가 */
+  margin-bottom:44px;
 }
 
-.hero strong{color:#fff}
+p.strong{
+  margin-bottom:64px;
+}
+
+strong{color:#fff}
+
+/* HERO */
+.hero{
+  padding-top:260px;
+}
 
 /* PROFILE */
-.profile{
-  background:linear-gradient(to bottom,#050505,#0b0b0b);
-}
-
 .profile-grid{
   display:grid;
-  grid-template-columns:1fr 1.5fr;
-  gap:60px;
+  grid-template-columns:1fr 1.2fr;
+  gap:100px;
   align-items:start;
+  text-align:left; /* 프로필 영역만 예외 */
 }
 
 .profile-image img{
   width:100%;
-  border-radius:10px;
-  border-left:4px solid var(--blue);
+  border-radius:18px;
+  border:1px solid var(--line);
 }
 
-.profile-content h2{
-  font-size:2.2rem;
-  margin-bottom:10px;
+.profile-box{
+  background:var(--card);
+  padding:64px;
+  border-radius:24px;
+  border:1px solid var(--line);
+  margin-bottom:64px;
 }
 
-.profile-intro{
-  color:var(--blue);
-  font-size:1.2rem;
-  font-weight:600;
-  margin-bottom:40px;
+.profile-box:last-child{
+  margin-bottom:0;
 }
 
-.career-box{margin-bottom:50px}
-
-.career-box h3{
-  color:var(--blue);
-  font-size:1.25rem;
-  margin-bottom:15px;
+.profile-box ul{
+  list-style:none;
 }
 
-.career-box ul{list-style:none}
-
-.career-box li{
-  color:var(--sub);
+.profile-box li{
   font-size:1.05rem;
-  margin-bottom:12px;
-  padding-left:14px;
+  color:var(--sub);
+  margin-bottom:18px;
+  padding-left:16px;
   position:relative;
 }
 
-.career-box li::before{
+.profile-box li::before{
   content:"•";
   position:absolute;
   left:0;
   color:var(--blue);
 }
 
-/* PROCESS */
-.philosophy{
-  text-align:center;
-}
-
-.philosophy h2{
-  font-size:2.4rem;
-  margin-bottom:70px;
-}
-
-.process-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:28px;
-}
-
-.process-item{
-  background:var(--card);
-  padding:60px 30px;
-  border-radius:18px;
-  border:1px solid #1a1a1a;
-}
-
-.process-item:nth-child(2){
-  border-color:var(--blue);
-  box-shadow:0 0 40px rgba(47,124,255,.15);
-}
-
-.process-item h4{
-  color:var(--blue);
-  font-size:1.5rem;
-  margin-bottom:14px;
-}
-
-.process-item p{
-  color:var(--sub);
-  font-size:1.05rem;
-}
-
 /* CTA */
-.cta{
-  text-align:center;
-  padding-top:180px;
-  padding-bottom:200px;
-  background:linear-gradient(to bottom,#050505,#0a0a0a);
-}
-
-.cta h2{
-  font-size:2.3rem;
-  margin-bottom:40px;
-}
-
-/* 두 번째 사진 본문 크기 상향 조정 */
-.cta-desc{
-  font-size:1.4rem; 
-  color:var(--sub);
-  max-width:800px;
-  margin:0 auto 60px;
-  line-height:1.8;
-}
-
-.cta-button{
+.cta a{
   display:inline-block;
   background:var(--blue);
   color:#fff;
-  padding:24px 70px;
-  font-size:1.3rem;
+  padding:28px 96px;
+  font-size:1.35rem;
   font-weight:800;
-  border-radius:12px;
+  border-radius:18px;
   text-decoration:none;
-  box-shadow:0 15px 40px rgba(47,124,255,.3);
 }
 
-.notice{
-  margin-top:35px;
-  color:var(--blue);
-  font-size:.95rem;
-}
-
-footer{
-  text-align:center;
-  padding:80px 0;
-  font-size:.8rem;
-  color:#777;
-}
-
-/* MOBILE - 이 부분이 모바일 화면에서의 크기를 결정합니다 */
+/* MOBILE */
 @media(max-width:768px){
-  section{padding:100px 0}
-  .hero{padding:140px 0}
-  .hero h1{font-size:1.9rem}
-  
-  /* 첫 번째 사진 본문: 모바일에서 크게 보이도록 수정 */
-  .hero p{
-    font-size:1.15rem; 
-    line-height:1.7;
-    margin-bottom:20px;
-  }
-  
-  .profile-grid{grid-template-columns:1fr}
-  .philosophy h2{font-size:1.7rem}
-  .process-grid{grid-template-columns:1fr}
-  .cta h2{font-size:1.6rem}
-  
-  /* 두 번째 사진 본문: 모바일에서 크게 보이도록 수정 */
-  .cta-desc{
-    font-size:1.15rem; 
-    line-height:1.7;
-  }
-  
-  .cta-button{width:100%; padding:22px 0}
+  h1{font-size:1.9rem}
+  h2{font-size:1.6rem; margin-bottom:64px}
+  p{font-size:1.1rem; margin-bottom:32px}
+  .profile-grid{grid-template-columns:1fr; text-align:center}
+  .profile-box{padding:40px}
+  .cta a{width:100%; padding:22px 0}
 }
 </style>
 </head>
 
 <body>
 
-<section class="hero container">
-  <h1>
-    저렴한 PT를 찾으십니까,<br />
-    <span class="point-text">확실한 결과를 찾으십니까?</span>
-  </h1>
-
-  <div class="hero-text-wrap">
-    <p>
-      많은 사람들이 당장의 낮은 결제 금액에 현혹되어<br />
-      저렴한 PT를 선택합니다.
-    </p>
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <h1>
+      운동을 해도 통증이 계속된다면,<br>
+      <span style="color:#2f7cff">이유는 따로 있습니다.</span>
+    </h1>
 
     <p>
-      하지만 <strong>저렴한 PT가 사실 가장 비싼 PT입니다.</strong>
+      대부분은 운동이 아니라 <strong>몸을 잘못 쓰고 있다는 걸 모른 채</strong><br>
+      반복했기 때문입니다.
     </p>
 
-    <p>
-      전문성 없는 지도에 지불한 비용,<br />
-      나아지지 않는 몸 때문에 버려진 시간,
+    <p class="strong">
+      <strong>
+        김주영 코치는 운동을 시키기 전에,<br>
+        몸을 어떻게 쓰고 있는지부터 확인합니다.
+      </strong>
     </p>
-
-    <p>
-      결국 잘못된 운동으로 망가진 몸을 되돌리기 위해<br />
-      치러야 할 기회비용까지.
-    </p>
-
-    <p><strong>당신의 소중한 시간과 비용을 낭비하지 마세요.</strong></p>
   </div>
 </section>
 
-<section class="profile">
-<div class="container profile-grid">
-  <div class="profile-image"><img src="me.png"></div>
-  <div class="profile-content">
-    <h2>김주영 코치</h2>
-    <p class="profile-intro">재활 · 교정 · 퍼포먼스 전문가</p>
+<!-- PROBLEM -->
+<section>
+  <div class="container">
+    <h2>통증은 노력의 문제가 아닙니다</h2>
 
-    <div class="career-box">
-      <h3>학력 및 연구</h3>
-      <ul>
-        <li>한국체육대학교 학사·석사 (전공: 운동역학, Biomechanics)</li>
-        <li>한국체육대학교 Motion Innovation Center 연구보조</li>
-        <li>보행·러닝·무선 족저압 인솔 관련 논문 실험 및 장비 개발 참여</li>
-        <li>KLPGA 프로골퍼 대상 스윙 분석 연구 학위논문</li>
-      </ul>
-    </div>
+    <p>
+      아픈데도 운동을 계속해 왔다는 건,<br>
+      이미 충분히 노력해 왔다는 뜻입니다.
+    </p>
 
-    <div class="career-box">
-      <h3>주요 경력</h3>
-      <ul>
-       <li>KPGA·KLPGA 프로골퍼 및 주니어 선수 트레이닝</li>
-       <li>호텔신라 Advance Personal Trainer (상위 등급)</li>
-       <li>삼성엔지니어링·삼성물산 부사장·전무·상무 전담 트레이닝</li>
-       <li>TPI Korea 창립 멤버 / 2014 World Golf Fitness Summit 한국 대표 참가</li>
-       <li>리베라CC 골프 트레이닝 센터 운영 (TPI Korea 공동)</li>
-       <li>6년간 김주영 코치 개인 브랜드 PT 스튜디오 운영</li>
-      </ul>
-    </div>
-  </div>
-</div>
-</section>
+    <p>
+      문제는 의지가 아니라,<br>
+      <strong>방향을 한 번도 제대로 잡아본 적이 없었다는 겁니다.</strong>
+    </p>
 
-<section class="philosophy container">
-  <h2>김주영 코치는 <br><span class="point-text">운동부터 시키지 않습니다</span></h2>
-  <div class="process-grid">
-    <div class="process-item">
-      <h4>평가 (Assessment)</h4>
-      <p>역학적 움직임 분석을 통한<br>신체 데이터 정밀 스캔</p>
-    </div>
-    <div class="process-item">
-      <h4>분석 (Analysis)</h4>
-      <p>보상 작용 및 통증의<br>근본적인 역학 관계 도출</p>
-    </div>
-    <div class="process-item">
-      <h4>솔루션 (Solution)</h4>
-      <p>신체 데이터 기반 맞춤 설계 및<br>정밀 피드백 제공</p>
-    </div>
+    <p>
+      같은 허리 통증이라도<br>
+      걷는 방식, 체중이 실리는 위치,<br>
+      반복되는 동작 습관은 전부 다릅니다.
+    </p>
+
+    <p class="strong">
+      그런데도 많은 곳에서는 같은 스트레칭,<br>
+      같은 운동을 반복합니다.
+    </p>
+
+    <p>
+      그래서 잠깐 괜찮아졌다가,<br>
+      다시 같은 통증으로 돌아옵니다.
+    </p>
   </div>
 </section>
 
-<section class="cta container">
-  <h2>강사의 학력과 경력은<br><span class="point-text">당신의 '결과'를 결정짓는 지표입니다</span></h2>
-  <p class="cta-desc">
-    가장 저렴한 곳을 찾아 시간과 비용을 낭비하시겠습니까?<br>
-    검증된 전문가에게 제대로 된 솔루션을 받으시겠습니까?<br><br>
-    <strong>지금 당신의 몸을 누구에게 맡기고 있는지 <br>반드시 확인하시기 바랍니다.</strong>
-  </p>
-  <a href="#" class="cta-button">김주영 코치에게 상담 받기</a>
-  <p class="notice">* 문의가 많아 순차적으로 안내해 드리고 있습니다.</p>
+<!-- PHILOSOPHY -->
+<section>
+  <div class="container">
+    <h2>운동부터 하지 않습니다</h2>
+
+    <p>
+       아프면 바로 운동을 시키는 게 아니라,<br>
+       몸을 어떻게 쓰고 있는지부터 봅니다.
+    </p>
+
+    <p>
+      사람이 어디서 힘을 잘못 쓰고 있는지,<br>
+      어떤 동작이 반복해서 부담을 만들고 있는지,<br>
+      <strong>움직임 자체를 기준으로 봐왔기 때문입니다.</strong>
+    </p>
+
+    <p class="strong">
+      그래서 아픈 부위만 보지 않고,<br>
+      <strong>왜 그렇게 아플 수밖에 없었는지부터 확인합니다.</strong>
+    </p>
+
+    <p>
+      이게 김주영 코치가<br>
+      <strong>운동부터 하지 않는 이유입니다.</strong>
+    </p>
+  </div>
 </section>
 
-<footer>© 김주영 코치. All Rights Reserved.</footer>
+<!-- PROFILE -->
+<section>
+  <div class="container">
+    <h2>김주영 코치 경력</h2>
+
+    <div class="profile-grid">
+      <div class="profile-image">
+        <img src="me.png" alt="김주영 코치">
+      </div>
+
+      <div>
+        <div class="profile-box">
+          <h3>학력 및 연구</h3>
+          <ul>
+            <li>한국체육대학교 학사·석사 (전공: 생체역학)</li>
+            <li>한국체육대학교 Motion Innovation Center 연구보조</li>
+            <li>보행·러닝·무선 족저압 인솔 관련 논문 실험 및 장비 개발 참여</li>
+            <li>KLPGA 프로골퍼 대상 스윙 분석 연구 학위논문</li>
+          </ul>
+        </div>
+
+        <div class="profile-box">
+          <h3>주요 경력</h3>
+          <ul>
+            <li>15년 이상 현장 경험</li>
+            <li>3천 명 이상의 신체 분석 및 관리 경험</li>
+            <li>호텔신라 Advance Personal Trainer</li>
+            <li>삼성엔지니어링·삼성물산 임원 전담 트레이닝</li>
+            <li>TPI Korea 창립 멤버</li>
+            <li>리베라CC 골프 트레이닝 센터 운영 경험</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="container">
+    <h2>
+      지금, 당신의 몸은<br>
+      어떤 기준으로 맡기고 있습니까?
+    </h2>
+
+    <p>
+      가장 저렴한 선택이 아니라,<br>
+      <strong>가장 납득되는 선택</strong>이 필요할 때가 있습니다.
+    </p>
+
+    <p class="strong">
+  이제는 이유부터 확인해볼 차례입니다.
+</p>
+
+    <a href="#">김주영 코치에게 상담 받기</a>
+  </div>
+</section>
 
 </body>
 </html>
-
