@@ -37,17 +37,15 @@ body{
   text-align:center;
 }
 
-/* ===== 섹션 간격 (최종 조정값) ===== */
+/* ===== 섹션 간격 ===== */
 section{
   padding:160px 0;
 }
 
-/* HERO만 별도 */
 .hero{
   padding-top:140px;
 }
 
-/* HERO 다음 섹션은 살짝 붙이기 */
 .hero + section{
   padding-top:120px;
 }
@@ -84,6 +82,21 @@ p.strong{
 }
 
 strong{color:#fff}
+
+/* ===== 변화 이미지 ===== */
+.change-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:28px;
+  margin-top:80px;
+}
+
+.change-grid img{
+  width:100%;
+  border-radius:18px;
+  border:1px solid var(--line);
+  background:#000;
+}
 
 /* ===== PROFILE ===== */
 .profile-grid{
@@ -170,6 +183,10 @@ strong{color:#fff}
 
   p.strong{
     margin-bottom:48px;
+  }
+
+  .change-grid{
+    gap:20px;
   }
 
   .profile-grid{
@@ -273,6 +290,45 @@ strong{color:#fff}
   </div>
 </section>
 
+<!-- CHANGE -->
+<section>
+  <div class="container">
+    <h2>원인을 바로잡았을 때의 변화</h2>
+
+    <p>
+      잘못된 움직임을 찾아내고,<br>
+      원인부터 바로잡았을 때 나타난 변화들입니다.
+    </p>
+
+    <p>
+      이 변화들은 단순히<br>
+      <strong>‘운동을 열심히 한 결과’가 아닙니다.</strong>
+    </p>
+
+    <p class="strong">
+      움직임 평가를 통해<br>
+      각자의 원인을 정확히 찾아낸 결과입니다.
+    </p>
+
+    <div class="change-grid">
+      <img src="1.png" alt="">
+      <img src="2.png" alt="">
+      <img src="3.png" alt="">
+      <img src="4.png" alt="">
+      <img src="5.png" alt="">
+      <img src="6.png" alt="">
+      <img src="7.png" alt="">
+      <img src="8.png" alt="">
+    </div>
+
+    <p class="strong" style="margin-top:80px">
+      원인만 정확히 찾으면,<br>
+      몸은 빠르게 바뀝니다.<br>
+      <strong>그동안 방향이 틀렸을 뿐입니다.</strong>
+    </p>
+  </div>
+</section>
+
 <!-- PROFILE -->
 <section>
   <div class="container">
@@ -334,7 +390,3 @@ strong{color:#fff}
 
 </body>
 </html>
-
-
-
-
