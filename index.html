@@ -110,15 +110,40 @@ strong{color:#fff}
   background: #030303;
 }
 
+.stats-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #fff;
+  background: #0d0d0d;
+  border: 1px solid #1e1e1e;
+  border-radius: 16px;
+  padding: 28px 32px;
+  margin-bottom: 48px;
+  max-width: 580px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.stats-dot {
+  width: 1px;
+  height: 16px;
+  background: #2a2a2a;
+  display: block;
+}
+
+
 .reviews-label {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  font-size: 0.75rem;
+  gap: 16px;
+  font-size: 0.95rem;
   font-weight: 600;
   color: #3d7aff;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  letter-spacing: 0.08em;
   margin-bottom: 56px;
 }
 
@@ -126,10 +151,10 @@ strong{color:#fff}
 .reviews-label::after {
   content: '';
   display: block;
-  width: 32px;
+  width: 56px;
   height: 1px;
   background: #3d7aff;
-  opacity: 0.5;
+  opacity: 0.4;
 }
 
 .reviews-list {
@@ -433,6 +458,14 @@ strong{color:#fff}
       <strong>움직임의 원인을 찾고 나서 달라졌습니다.</strong>
     </p>
 
+    <div class="stats-bar">
+      <span>前 다산 피트너 PT 스튜디오 대표 6년 운영</span>
+      <span class="stats-dot"></span>
+      <span>6년 누적 PT 회원 1,200+</span>
+      <span class="stats-dot"></span>
+      <span>네이버 후기 300+</span>
+    </div>
+
     <div class="reviews-label">네이버 플레이스 실제 후기</div>
 
     <div class="reviews-list">
@@ -541,9 +574,9 @@ strong{color:#fff}
             <li>호텔신라 스포츠 레저사업부 인증<br>Advance Personal Trainer</li>
             <li>삼성엔지니어링·삼성물산<br>부사장·전무·상무 전담 트레이닝</li>
             <li>KPGA·KPLGA 프로골퍼 트레이닝<br>주니어 선수 트레이닝</li>
-            <li>TPI Korea 창립 멤버<br>Power Coach</li>
+            <li>TPI Korea 창립 멤버</li>
             <li>리베라CC 골프 트레이닝 센터<br>TPI Korea 공동 운영</li>
-            <li>김주영 코치 브랜드<br>PT Studio 6년 운영</li>
+            <li>김주영 코치<br>PT Studio 6년 운영</li>
           </ul>
         </div>
       </div>
