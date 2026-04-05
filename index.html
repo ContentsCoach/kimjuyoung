@@ -159,361 +159,8 @@ strong{color:#fff}
 }
 
 .reviews-list {
-  max-width: 580px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.review-item {
-  position: relative;
-  background: #090909;
-  border: 1px solid #181818;
-  border-radius: 20px;
-  overflow: hidden;
-  transition: border-color 0.25s ease, transform 0.25s ease;
-}
-
-.review-item:hover {
-  border-color: rgba(47,124,255,0.2);
-  transform: translateY(-2px);
-}
-
-.review-item-header {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 20px 24px 16px;
-}
-
-.review-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--blue);
-  flex-shrink: 0;
-  box-shadow: 0 0 8px rgba(47,124,255,0.6);
-}
-
-.review-label-text {
-  font-size: 0.73rem;
-  font-weight: 700;
-  color: #5a9bff;
-  letter-spacing: 0.04em;
-  flex: 1;
-  text-align: left;
-}
-
-.review-stars-small {
-  font-size: 0.7rem;
-  color: #3d7aff;
-  opacity: 0.7;
-  letter-spacing: 1px;
-}
-
-.review-item img {
-  width: 100%;
-  display: block;
-  border-top: 1px solid #141414;
-}
-
-/* ===== PROFILE ===== */
-.profile-grid{
-  display:grid;
-  grid-template-columns:1fr 1.2fr;
-  gap:80px;
-  align-items:start;
-  text-align:left;
-}
-
-.profile-image img{
-  width:100%;
-  border-radius:18px;
-  border:1px solid var(--line);
-}
-
-.profile-box{
-  background:var(--card);
-  padding:56px;
-  border-radius:22px;
-  border:1px solid var(--line);
-  margin-bottom:56px;
-}
-
-.profile-box:last-child{
-  margin-bottom:0;
-}
-
-.profile-box ul{
-  list-style:none;
-}
-
-.profile-box li{
-  font-size:1.05rem;
-  color:var(--sub);
-  margin-bottom:18px;
-  padding-left:16px;
-  position:relative;
-}
-
-.profile-box li::before{
-  content:"•";
-  position:absolute;
-  left:0;
-  color:var(--blue);
-}
-
-/* ===== CTA ===== */
-.cta a{
-  display:inline-block;
-  background:var(--blue);
-  color:#fff;
-  padding:26px 90px;
-  font-size:1.35rem;
-  font-weight:800;
-  border-radius:18px;
-  text-decoration:none;
-}
-
-/* ===== MOBILE ===== */
-@media(max-width:768px){
-  section{
-    padding:120px 0;
-  }
-
-  .hero{
-    padding-top:110px;
-  }
-
-  h1{
-    font-size:1.9rem;
-    margin-bottom:40px;
-  }
-
-  h2{
-    font-size:1.6rem;
-    margin-bottom:60px;
-  }
-
-  p{
-    font-size:1.1rem;
-    margin-bottom:32px;
-  }
-
-  p.strong{
-    margin-bottom:48px;
-  }
-
-  .change-grid{
-    gap:20px;
-  }
-
-
-  .profile-grid{
-    grid-template-columns:1fr;
-    text-align:center;
-  }
-
-  .profile-box{
-    padding:40px;
-  }
-
-  .cta a{
-    width:100%;
-    padding:22px 0;
-  }
-}
-</style>
-</head>
-
-<body>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="container">
-    <p style="font-size:0.9rem;color:#555;letter-spacing:0.06em;margin-bottom:24px;">한국체육대학교 학사·석사 &nbsp;|&nbsp; 15년차 트레이너</p>
-    <h1>
-      운동을 해도 통증이 계속된다면,<br>
-      <span style="color:#2f7cff">이유는 따로 있습니다.</span>
-    </h1>
-
-    <p>
-      대부분은 운동이 부족해서가 아니라<br><strong>몸을 잘못 쓰고 있다는 걸 모른 채</strong><br>
-      같은 동작만 반복했기 때문입니다.
-    </p>
-
-    <p class="strong">
-      <strong>
-        김주영 코치는 무작정 운동을 시키기 전에,<br>
-        몸을 어떻게 쓰고 있는지부터 확인합니다.
-      </strong>
-    </p>
-  </div>
-</section>
-
-<!-- PROBLEM -->
-<section>
-  <div class="container">
-    <h2>통증은 '노력'의 문제가 아닙니다</h2>
-
-    <p>
-      아픈데도 운동을 계속해 온 당신은,<br>
-      이미 누구보다 충분히 노력해 왔습니다.
-    </p>
-
-    <p>
-      문제는 의지가 아니라,<br>
-      <strong>단 한번도 제대로된 방향</strong>을<br>잡아본 적이 없었다는 겁니다.
-    </p>
-
-    <p>
-      같은 허리 통증이라도<br>걷는 방식, 체중이 실리는 위치,<br>
-      반복되는 습관은 사람마다 다릅니다.
-    </p>
-
-    <p class="strong">
-      그런데 많은 곳에서는 누구에게나<br>
-      똑같은 스트레칭과 운동만 반복합니다.
-    </p>
-
-    <p>
-      잠깐 괜찮아졌다가도,<br>
-      통증이 돌아오는 이유가 바로 이것입니다.
-    </p>
-  </div>
-</section>
-
-<!-- PHILOSOPHY -->
-<section>
-  <div class="container">
-    <h2>김주영코치는<br>운동부터 시키지 않습니다</h2>
-
-    <p>
-      몸을 어떻게 쓰고 있는지부터 확인합니다.
-    </p>
-
-    <p>
-      어디서 힘을 잘못 쓰고 있는지,<br>
-      어떤 동작이 반복적으로 부담을 주는지<br>
-      <strong>'움직임' 자체를 기준으로 평가합니다.</strong>
-    </p>
-
-    <p class="strong">
-      아픈 부위만 보는게 아니라,<br>
-      <strong>'왜 아플 수밖에 없었는지'</strong><br>원인부터 찾는것.
-    </p>
-
-    <p>
-      이것이 김주영 코치가<br>
-      <strong>운동보다 평가를 우선하는 이유입니다.</strong>
-    </p>
-  </div>
-</section>
-
-<!-- CHANGE -->
-<section>
-  <div class="container">
-    <h2>원인을 바로잡았을 때의 변화</h2>
-
-    <p>
-      잘못된 움직임을 찾아내고,<br>
-      원인부터 바로잡았을 때 나타난 변화들입니다.
-    </p>
-
-    <p>
-      이 변화들은 단순히<br>
-      <strong>'운동을 열심히 한 결과'가 아닙니다.</strong>
-    </p>
-
-    <p class="strong">
-      움직임 평가를 통해<br>
-      각자의 원인을 정확히 찾아낸 결과입니다.
-    </p>
-
-    <div class="change-grid">
-      <img src="1.png" alt="">
-      <img src="2.png" alt="">
-      <img src="3.png" alt="">
-      <img src="4.png" alt="">
-      <img src="5.png" alt="">
-      <img src="6.png" alt="">
-      <img src="7.png" alt="">
-      <img src="8.png" alt="">
-    </div>
-
-    <p class="strong" style="margin-top:80px">
-      원인만 정확히 찾으면,<br>
-      몸은 빠르게 바뀝니다.<br>
-      <strong>그동안 방향이 틀렸을 뿐입니다.</strong>
-    </p>
-  </div>
-</section>
-
-<!-- REVIEWS -->
-<section class="reviews-section">
-  <div class="container">
-    <h2>실제로 변화한 사람들의 이야기</h2>
-
-    <p>
-      운동을 열심히 해도 통증이 사라지지 않던 사람들.<br>
-      <strong>움직임의 원인을 찾고 나서 달라졌습니다.</strong>
-    </p>
-
-    <div class="reviews-label">네이버 플레이스 실제 후기</div>
-
-    <div class="reviews-list">
-
-      <div class="review-item">
-        <div class="review-item-header">
-          <div class="review-dot"></div>
-          <span class="review-label-text">골절 후유증 · 한 달 만에 통증 해결</span>
-          <span class="review-stars-small">★★★★★</span>
-        </div>
-        <img src="review1.jpg" alt="후기 1">
-      </div>
-
-      <div class="review-item">
-        <div class="review-item-header">
-          <div class="review-dot"></div>
-          <span class="review-label-text">목 통증 · 체험 당일 효과</span>
-          <span class="review-stars-small">★★★★★</span>
-        </div>
-        <img src="review2.jpg" alt="후기 2">
-      </div>
-
-      <div class="review-item">
-        <div class="review-item-header">
-          <div class="review-dot"></div>
-          <span class="review-label-text">척추디스크 · 허리 통증</span>
-          <span class="review-stars-small">★★★★★</span>
-        </div>
-        <img src="review3.jpg" alt="후기 3">
-      </div>
-
-      <div class="review-item">
-        <div class="review-item-header">
-          <div class="review-dot"></div>
-          <span class="review-label-text">승모근 · 뒷목 통증</span>
-          <span class="review-stars-small">★★★★★</span>
-        </div>
-        <img src="review4.jpg" alt="후기 4">
-      </div>
-
-      <div class="review-item">
-        <div class="review-item-header">
-          <div class="review-dot"></div>
-          <span class="review-label-text">골프 스윙 · 거리 향상</span>
-          <span class="review-stars-small">★★★★★</span>
-        </div>
-        <img src="review5.jpg" alt="후기 5">
-      </div>
-
-      <div class="review-item">
-        <div class="review-item-header">
-          <div class="review-dot"></div>
-          <span class="review-label-text">여러 곳 비교 후 등록</span>
-          <span class="review-stars-small">★★★★★</span>
+… +355 lines …
+n>
         </div>
         <img src="review6.jpg" alt="후기 6">
       </div>
@@ -609,4 +256,792 @@ strong{color:#fff}
 </section>
 
 </body>
-</html>
+</html>  번외로 이거 내가 개인적으로 쓰는 랜딩페이지인데 이것도 리빌드 되냐
+
+● 됩니다. 지금 코드 보니까 구조는 잘 잡혀있는데 몇 가지 올릴 수 있는 부분이 있어요:
+
+  - 스크롤 애니메이션 (섹션 등장 효과)
+  - 히어로 텍스트 타이핑 효과
+  - 모바일 여백·폰트 사이즈 미세 조정
+  - 성능 최적화 (이미지 lazy loading 등)
+
+  그대로 HTML 파일로 리빌드할까요, 아니면 Next.js로 올릴까요?
+
+  그리고 me.png, review1~8.jpg, 1~8.png 이미지 파일들은 직접 넣으셔야 해서 — 이미지 경로만 맞추면 바로 쓸 수 있게
+  만들어드릴게요.
+
+> HTML 파일로
+
+  Listed 1 directory (ctrl+o to expand)
+
+● Write(/c/Users/82107/Desktop/kimjuyoung/index.html)
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ Create file
+ ..\..\Desktop\kimjuyoung\index.html
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+    1 <!DOCTYPE html>
+    2 <html lang="ko">
+    3 <head>
+    4 <meta charset="UTF-8">
+    5 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    6 <title>김주영 코치 | 근골격계 통증 전문가</title>
+    7 <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    8 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretenda
+      rd.css">
+    9
+   10 <style>
+   11 :root {
+   12   --bg: #050505;
+   13   --card: #0d0d0d;
+   14   --line: #1a1a1a;
+   15   --blue: #2f7cff;
+   16   --blue-dim: rgba(47,124,255,0.12);
+   17   --text: #ffffff;
+   18   --sub: #b8b8b8;
+   19 }
+   20
+   21 *, *::before, *::after {
+   22   margin: 0; padding: 0;
+   23   box-sizing: border-box;
+   24   font-family: 'Pretendard', -apple-system, sans-serif;
+   25 }
+   26
+   27 html { scroll-behavior: smooth; }
+   28
+   29 body {
+   30   background: var(--bg);
+   31   color: var(--text);
+   32   line-height: 1.9;
+   33   word-break: keep-all;
+   34   overflow-x: hidden;
+   35 }
+   36
+   37 /* ── 스크롤 애니메이션 ── */
+   38 .reveal {
+   39   opacity: 0;
+   40   transform: translateY(36px);
+   41   transition: opacity 0.75s cubic-bezier(0.16,1,0.3,1),
+   42               transform 0.75s cubic-bezier(0.16,1,0.3,1);
+   43 }
+   44 .reveal.visible { opacity: 1; transform: translateY(0); }
+   45 .reveal-delay-1 { transition-delay: 0.1s; }
+   46 .reveal-delay-2 { transition-delay: 0.2s; }
+   47 .reveal-delay-3 { transition-delay: 0.3s; }
+   48 .reveal-delay-4 { transition-delay: 0.4s; }
+   49
+   50 /* ── 레이아웃 ── */
+   51 .container {
+   52   max-width: 960px;
+   53   margin: 0 auto;
+   54   padding: 0 28px;
+   55   text-align: center;
+   56 }
+   57
+   58 section { padding: 160px 0; }
+   59 .hero   { padding: 180px 0 160px; }
+   60
+   61 /* ── 구분선 ── */
+   62 .divider {
+   63   width: 100%;
+   64   height: 1px;
+   65   background: linear-gradient(90deg, transparent, var(--line) 20%, var(--line) 80%, transparent);
+   66 }
+   67
+   68 /* ── 타이포 ── */
+   69 h1, h2, h3 { letter-spacing: -0.025em; }
+   70
+   71 h1 {
+   72   font-size: clamp(2rem, 4.5vw, 3rem);
+   73   font-weight: 800;
+   74   line-height: 1.3;
+   75   margin-bottom: 52px;
+   76 }
+   77
+   78 h2 {
+   79   font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+   80   font-weight: 800;
+   81   line-height: 1.35;
+   82   margin-bottom: 72px;
+   83 }
+   84
+   85 h3 {
+   86   font-size: 1.15rem;
+   87   font-weight: 700;
+   88   color: var(--blue);
+   89   margin-bottom: 28px;
+   90   letter-spacing: 0.01em;
+   91 }
+   92
+   93 p {
+   94   font-size: clamp(1.05rem, 2vw, 1.2rem);
+   95   color: var(--sub);
+   96   margin-bottom: 36px;
+   97 }
+   98
+   99 p.strong { margin-bottom: 56px; }
+  100 strong { color: #fff; }
+  101
+  102 /* ── 형광펜 ── */
+  103 .highlight {
+  104   background: linear-gradient(transparent 58%, rgba(47,124,255,0.3) 58%);
+  105   padding: 0 3px;
+  106 }
+  107
+  108 /* ── 태그 ── */
+  109 .tag {
+  110   display: inline-block;
+  111   font-size: 0.78rem;
+  112   font-weight: 600;
+  113   color: #4a8aff;
+  114   letter-spacing: 0.08em;
+  115   margin-bottom: 28px;
+  116   background: rgba(47,124,255,0.1);
+  117   border: 1px solid rgba(47,124,255,0.2);
+  118   padding: 6px 16px;
+  119   border-radius: 100px;
+  120 }
+  121
+  122 /* ── 히어로 ── */
+  123 .hero-meta {
+  124   font-size: 0.85rem;
+  125   color: #444;
+  126   letter-spacing: 0.06em;
+  127   margin-bottom: 32px;
+  128   font-weight: 500;
+  129 }
+  130
+  131 .hero-cta {
+  132   display: inline-flex;
+  133   align-items: center;
+  134   gap: 10px;
+  135   background: var(--blue);
+  136   color: #fff;
+  137   font-size: 1rem;
+  138   font-weight: 700;
+  139   padding: 18px 44px;
+  140   border-radius: 14px;
+  141   text-decoration: none;
+  142   margin-top: 20px;
+  143   transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  144   box-shadow: 0 0 40px rgba(47,124,255,0.25);
+  145 }
+  146 .hero-cta:hover {
+  147   background: #1a68f0;
+  148   transform: translateY(-2px);
+  149   box-shadow: 0 8px 40px rgba(47,124,255,0.4);
+  150 }
+  151 .hero-cta svg { width: 18px; height: 18px; }
+  152
+  153 /* ── 변화 그리드 ── */
+  154 .change-grid {
+  155   display: grid;
+  156   grid-template-columns: repeat(2, 1fr);
+  157   gap: 16px;
+  158   margin-top: 72px;
+  159 }
+  160
+  161 .change-grid img {
+  162   width: 100%;
+  163   border-radius: 16px;
+  164   border: 1px solid var(--line);
+  165   background: #0a0a0a;
+  166   display: block;
+  167   transition: transform 0.3s ease, border-color 0.3s ease;
+  168 }
+  169 .change-grid img:hover {
+  170   transform: scale(1.02);
+  171   border-color: rgba(47,124,255,0.3);
+  172 }
+  173
+  174 /* ── 리뷰 ── */
+  175 .reviews-section { background: #030303; }
+  176
+  177 .reviews-label {
+  178   display: inline-flex;
+  179   align-items: center;
+  180   gap: 14px;
+  181   font-size: 0.85rem;
+  182   font-weight: 700;
+  183   color: var(--blue);
+  184   letter-spacing: 0.08em;
+  185   margin-bottom: 52px;
+  186 }
+  187 .reviews-label::before,
+  188 .reviews-label::after {
+  189   content: '';
+  190   display: block;
+  191   width: 48px;
+  192   height: 1px;
+  193   background: var(--blue);
+  194   opacity: 0.35;
+  195 }
+  196
+  197 .reviews-list {
+  198   max-width: 560px;
+  199   margin: 0 auto;
+  200   display: flex;
+  201   flex-direction: column;
+  202   gap: 4px;
+  203 }
+  204
+  205 .review-item {
+  206   background: #080808;
+  207   border: 1px solid #161616;
+  208   border-radius: 18px;
+  209   overflow: hidden;
+  210   transition: border-color 0.25s, transform 0.25s;
+  211 }
+  212 .review-item:hover {
+  213   border-color: rgba(47,124,255,0.18);
+  214   transform: translateY(-2px);
+  215 }
+  216
+  217 .review-item-header {
+  218   display: flex;
+  219   align-items: center;
+  220   gap: 10px;
+  221   padding: 18px 22px 14px;
+  222 }
+  223
+  224 .review-dot {
+  225   width: 6px; height: 6px;
+  226   border-radius: 50%;
+  227   background: var(--blue);
+  228   flex-shrink: 0;
+  229   box-shadow: 0 0 8px rgba(47,124,255,0.7);
+  230 }
+  231
+  232 .review-label-text {
+  233   font-size: 0.72rem;
+  234   font-weight: 700;
+  235   color: #5a9bff;
+  236   letter-spacing: 0.03em;
+  237   flex: 1;
+  238   text-align: left;
+  239 }
+  240
+  241 .review-stars {
+  242   font-size: 0.65rem;
+  243   color: var(--blue);
+  244   opacity: 0.65;
+  245   letter-spacing: 1px;
+  246 }
+  247
+  248 .review-item img {
+  249   width: 100%;
+  250   display: block;
+  251   border-top: 1px solid #111;
+  252   loading: lazy;
+  253 }
+  254
+  255 /* ── 통계 바 ── */
+  256 .stats-bar {
+  257   display: flex;
+  258   flex-direction: column;
+  259   align-items: center;
+  260   gap: 14px;
+  261   font-size: 0.9rem;
+  262   font-weight: 600;
+  263   color: #ccc;
+  264   background: #0a0a0a;
+  265   border: 1px solid #1a1a1a;
+  266   border-radius: 18px;
+  267   padding: 32px 40px;
+  268   margin: 60px auto 0;
+  269   max-width: 540px;
+  270 }
+  271
+  272 .stats-dot {
+  273   width: 1px; height: 14px;
+  274   background: #2a2a2a;
+  275 }
+  276
+  277 /* ── 프로필 ── */
+  278 .profile-grid {
+  279   display: grid;
+  280   grid-template-columns: 1fr 1.3fr;
+  281   gap: 64px;
+  282   align-items: start;
+  283   text-align: left;
+  284 }
+  285
+  286 .profile-image img {
+  287   width: 100%;
+  288   border-radius: 20px;
+  289   border: 1px solid var(--line);
+  290   display: block;
+  291   position: sticky;
+  292   top: 100px;
+  293 }
+  294
+  295 .profile-box {
+  296   background: var(--card);
+  297   padding: 48px;
+  298   border-radius: 20px;
+  299   border: 1px solid var(--line);
+  300   margin-bottom: 16px;
+  301   transition: border-color 0.3s;
+  302 }
+  303 .profile-box:hover { border-color: rgba(47,124,255,0.15); }
+  304 .profile-box:last-child { margin-bottom: 0; }
+  305
+  306 .profile-box ul { list-style: none; }
+  307
+  308 .profile-box li {
+  309   font-size: 0.98rem;
+  310   color: var(--sub);
+  311   margin-bottom: 16px;
+  312   padding-left: 18px;
+  313   position: relative;
+  314   line-height: 1.7;
+  315 }
+  316 .profile-box li::before {
+  317   content: "·";
+  318   position: absolute;
+  319   left: 0;
+  320   color: var(--blue);
+  321   font-size: 1.2rem;
+  322   line-height: 1.5;
+  323 }
+  324
+  325 /* ── CTA 섹션 ── */
+  326 .cta-section {
+  327   position: relative;
+  328   overflow: hidden;
+  329 }
+  330
+  331 .cta-section::before {
+  332   content: '';
+  333   position: absolute;
+  334   top: -200px;
+  335   left: 50%;
+  336   transform: translateX(-50%);
+  337   width: 800px;
+  338   height: 800px;
+  339   background: radial-gradient(circle, rgba(47,124,255,0.06) 0%, transparent 70%);
+  340   pointer-events: none;
+  341 }
+  342
+  343 .cta-btn {
+  344   display: inline-flex;
+  345   align-items: center;
+  346   gap: 12px;
+  347   background: var(--blue);
+  348   color: #fff;
+  349   font-size: 1.2rem;
+  350   font-weight: 800;
+  351   padding: 26px 80px;
+  352   border-radius: 18px;
+  353   text-decoration: none;
+  354   transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  355   box-shadow: 0 0 60px rgba(47,124,255,0.3);
+  356   letter-spacing: -0.01em;
+  357 }
+  358 .cta-btn:hover {
+  359   background: #1a68f0;
+  360   transform: translateY(-3px);
+  361   box-shadow: 0 12px 60px rgba(47,124,255,0.5);
+  362 }
+  363
+  364 /* ── 푸터 ── */
+  365 footer {
+  366   padding: 40px 28px;
+  367   border-top: 1px solid var(--line);
+  368   text-align: center;
+  369   font-size: 0.8rem;
+  370   color: #333;
+  371 }
+  372
+  373 /* ── 모바일 ── */
+  374 @media (max-width: 768px) {
+  375   section { padding: 100px 0; }
+  376   .hero   { padding: 130px 0 100px; }
+  377
+  378   .change-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  379
+  380   .profile-grid {
+  381     grid-template-columns: 1fr;
+  382     gap: 32px;
+  383     text-align: center;
+  384   }
+  385
+  386   .profile-image img { position: static; }
+  387
+  388   .profile-box {
+  389     padding: 32px 28px;
+  390     text-align: left;
+  391   }
+  392
+  393   .stats-bar { padding: 24px 24px; }
+  394
+  395   .cta-btn {
+  396     width: 100%;
+  397     padding: 22px 0;
+  398     justify-content: center;
+  399     font-size: 1.05rem;
+  400   }
+  401 }
+  402
+  403 /* ── 커서 깜빡임 ── */
+  404 .cursor {
+  405   display: inline-block;
+  406   width: 3px;
+  407   height: 1em;
+  408   background: var(--blue);
+  409   margin-left: 4px;
+  410   vertical-align: middle;
+  411   animation: blink 1s step-end infinite;
+  412 }
+  413 @keyframes blink {
+  414   0%, 100% { opacity: 1; }
+  415   50%       { opacity: 0; }
+  416 }
+  417 </style>
+  418 </head>
+  419
+  420 <body>
+  421
+  422 <!-- HERO -->
+  423 <section class="hero">
+  424   <div class="container">
+  425     <p class="hero-meta reveal">한국체육대학교 학사·석사 &nbsp;|&nbsp; 15년차 트레이너</p>
+  426
+  427     <h1 class="reveal reveal-delay-1">
+  428       운동을 해도 통증이 계속된다면,<br>
+  429       <span style="color:var(--blue)" id="hero-typed"></span><span class="cursor"></span>
+  430     </h1>
+  431
+  432     <p class="reveal reveal-delay-2">
+  433       대부분은 운동이 부족해서가 아니라<br>
+  434       <strong>몸을 잘못 쓰고 있다는 걸 모른 채</strong><br>
+  435       같은 동작만 반복했기 때문입니다.
+  436     </p>
+  437
+  438     <p class="strong reveal reveal-delay-3">
+  439       <strong>
+  440         김주영 코치는 무작정 운동을 시키기 전에,<br>
+  441         몸을 어떻게 쓰고 있는지부터 확인합니다.
+  442       </strong>
+  443     </p>
+  444
+  445     <a href="https://open.kakao.com/o/sCbasubi" target="_blank" rel="noopener noreferrer"
+  446        class="hero-cta reveal reveal-delay-4">
+  447       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stro
+      ke-linejoin="round">
+  448         <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+  449       </svg>
+  450       지금 무료 상담 받기
+  451     </a>
+  452   </div>
+  453 </section>
+  454
+  455 <div class="divider"></div>
+  456
+  457 <!-- PROBLEM -->
+  458 <section>
+  459   <div class="container">
+  460     <div class="tag reveal">PROBLEM</div>
+  461     <h2 class="reveal reveal-delay-1">통증은 '노력'의 문제가 아닙니다</h2>
+  462
+  463     <p class="reveal reveal-delay-2">
+  464       아픈데도 운동을 계속해 온 당신은,<br>
+  465       이미 누구보다 충분히 노력해 왔습니다.
+  466     </p>
+  467
+  468     <p class="reveal reveal-delay-2">
+  469       문제는 의지가 아니라,<br>
+  470       <strong>단 한번도 제대로 된 방향</strong>을<br>잡아본 적이 없었다는 겁니다.
+  471     </p>
+  472
+  473     <p class="reveal reveal-delay-3">
+  474       같은 허리 통증이라도<br>
+  475       걷는 방식, 체중이 실리는 위치,<br>
+  476       반복되는 습관은 사람마다 다릅니다.
+  477     </p>
+  478
+  479     <p class="strong reveal reveal-delay-3">
+  480       그런데 많은 곳에서는 누구에게나<br>
+  481       똑같은 스트레칭과 운동만 반복합니다.
+  482     </p>
+  483
+  484     <p class="reveal reveal-delay-4">
+  485       잠깐 괜찮아졌다가도,<br>
+  486       통증이 돌아오는 이유가 바로 이것입니다.
+  487     </p>
+  488   </div>
+  489 </section>
+  490
+  491 <div class="divider"></div>
+  492
+  493 <!-- PHILOSOPHY -->
+  494 <section>
+  495   <div class="container">
+  496     <div class="tag reveal">PHILOSOPHY</div>
+  497     <h2 class="reveal reveal-delay-1">
+  498       김주영 코치는<br>운동부터 시키지 않습니다
+  499     </h2>
+  500
+  501     <p class="reveal reveal-delay-2">몸을 어떻게 쓰고 있는지부터 확인합니다.</p>
+  502
+  503     <p class="reveal reveal-delay-2">
+  504       어디서 힘을 잘못 쓰고 있는지,<br>
+  505       어떤 동작이 반복적으로 부담을 주는지<br>
+  506       <strong class="highlight">'움직임' 자체를 기준으로 평가합니다.</strong>
+  507     </p>
+  508
+  509     <p class="strong reveal reveal-delay-3">
+  510       아픈 부위만 보는 게 아니라,<br>
+  511       <strong>'왜 아플 수밖에 없었는지'</strong><br>원인부터 찾는 것.
+  512     </p>
+  513
+  514     <p class="reveal reveal-delay-4">
+  515       이것이 김주영 코치가<br>
+  516       <strong>운동보다 평가를 우선하는 이유입니다.</strong>
+  517     </p>
+  518   </div>
+  519 </section>
+  520
+  521 <div class="divider"></div>
+  522
+  523 <!-- CHANGE -->
+  524 <section>
+  525   <div class="container">
+  526     <div class="tag reveal">RESULTS</div>
+  527     <h2 class="reveal reveal-delay-1">원인을 바로잡았을 때의 변화</h2>
+  528
+  529     <p class="reveal reveal-delay-2">
+  530       잘못된 움직임을 찾아내고,<br>
+  531       원인부터 바로잡았을 때 나타난 변화들입니다.
+  532     </p>
+  533
+  534     <p class="reveal reveal-delay-3">
+  535       이 변화들은 단순히<br>
+  536       <strong>'운동을 열심히 한 결과'가 아닙니다.</strong>
+  537     </p>
+  538
+  539     <p class="strong reveal reveal-delay-3">
+  540       움직임 평가를 통해<br>
+  541       각자의 원인을 정확히 찾아낸 결과입니다.
+  542     </p>
+  543
+  544     <div class="change-grid">
+  545       <img src="1.png" alt="변화 사례 1" loading="lazy" class="reveal">
+  546       <img src="2.png" alt="변화 사례 2" loading="lazy" class="reveal reveal-delay-1">
+  547       <img src="3.png" alt="변화 사례 3" loading="lazy" class="reveal reveal-delay-2">
+  548       <img src="4.png" alt="변화 사례 4" loading="lazy" class="reveal reveal-delay-2">
+  549       <img src="5.png" alt="변화 사례 5" loading="lazy" class="reveal reveal-delay-3">
+  550       <img src="6.png" alt="변화 사례 6" loading="lazy" class="reveal reveal-delay-3">
+  551       <img src="7.png" alt="변화 사례 7" loading="lazy" class="reveal reveal-delay-4">
+  552       <img src="8.png" alt="변화 사례 8" loading="lazy" class="reveal reveal-delay-4">
+  553     </div>
+  554
+  555     <p class="strong reveal" style="margin-top:72px">
+  556       원인만 정확히 찾으면,<br>
+  557       몸은 빠르게 바뀝니다.<br>
+  558       <strong>그동안 방향이 틀렸을 뿐입니다.</strong>
+  559     </p>
+  560   </div>
+  561 </section>
+  562
+  563 <div class="divider"></div>
+  564
+  565 <!-- REVIEWS -->
+  566 <section class="reviews-section">
+  567   <div class="container">
+  568     <div class="tag reveal">REVIEWS</div>
+  569     <h2 class="reveal reveal-delay-1">실제로 변화한 사람들의 이야기</h2>
+  570
+  571     <p class="reveal reveal-delay-2">
+  572       운동을 열심히 해도 통증이 사라지지 않던 사람들.<br>
+  573       <strong>움직임의 원인을 찾고 나서 달라졌습니다.</strong>
+  574     </p>
+  575
+  576     <div class="reviews-label reveal reveal-delay-3">네이버 플레이스 실제 후기</div>
+  577
+  578     <div class="reviews-list">
+  579       <div class="review-item reveal">
+  580         <div class="review-item-header">
+  581           <div class="review-dot"></div>
+  582           <span class="review-label-text">골절 후유증 · 한 달 만에 통증 해결</span>
+  583           <span class="review-stars">★★★★★</span>
+  584         </div>
+  585         <img src="review1.jpg" alt="후기 1" loading="lazy">
+  586       </div>
+  587
+  588       <div class="review-item reveal reveal-delay-1">
+  589         <div class="review-item-header">
+  590           <div class="review-dot"></div>
+  591           <span class="review-label-text">목 통증 · 체험 당일 효과</span>
+  592           <span class="review-stars">★★★★★</span>
+  593         </div>
+  594         <img src="review2.jpg" alt="후기 2" loading="lazy">
+  595       </div>
+  596
+  597       <div class="review-item reveal reveal-delay-1">
+  598         <div class="review-item-header">
+  599           <div class="review-dot"></div>
+  600           <span class="review-label-text">척추디스크 · 허리 통증</span>
+  601           <span class="review-stars">★★★★★</span>
+  602         </div>
+  603         <img src="review3.jpg" alt="후기 3" loading="lazy">
+  604       </div>
+  605
+  606       <div class="review-item reveal reveal-delay-2">
+  607         <div class="review-item-header">
+  608           <div class="review-dot"></div>
+  609           <span class="review-label-text">승모근 · 뒷목 통증</span>
+  610           <span class="review-stars">★★★★★</span>
+  611         </div>
+  612         <img src="review4.jpg" alt="후기 4" loading="lazy">
+  613       </div>
+  614
+  615       <div class="review-item reveal reveal-delay-2">
+  616         <div class="review-item-header">
+  617           <div class="review-dot"></div>
+  618           <span class="review-label-text">골프 스윙 · 거리 향상</span>
+  619           <span class="review-stars">★★★★★</span>
+  620         </div>
+  621         <img src="review5.jpg" alt="후기 5" loading="lazy">
+  622       </div>
+  623
+  624       <div class="review-item reveal reveal-delay-3">
+  625         <div class="review-item-header">
+  626           <div class="review-dot"></div>
+  627           <span class="review-label-text">여러 곳 비교 후 등록</span>
+  628           <span class="review-stars">★★★★★</span>
+  629         </div>
+  630         <img src="review6.jpg" alt="후기 6" loading="lazy">
+  631       </div>
+  632
+  633       <div class="review-item reveal reveal-delay-3">
+  634         <div class="review-item-header">
+  635           <div class="review-dot"></div>
+  636           <span class="review-label-text">기존 PT와 다른 접근</span>
+  637           <span class="review-stars">★★★★★</span>
+  638         </div>
+  639         <img src="review7.jpg" alt="후기 7" loading="lazy">
+  640       </div>
+  641
+  642       <div class="review-item reveal reveal-delay-4">
+  643         <div class="review-item-header">
+  644           <div class="review-dot"></div>
+  645           <span class="review-label-text">4곳 방문 후 바로 등록</span>
+  646           <span class="review-stars">★★★★★</span>
+  647         </div>
+  648         <img src="review8.jpg" alt="후기 8" loading="lazy">
+  649       </div>
+  650     </div>
+  651
+  652     <div class="stats-bar reveal">
+  653       <span>前 다산 피트너 PT 스튜디오 대표</span>
+  654       <span class="stats-dot"></span>
+  655       <span>다산신도시 6년 누적 PT 회원 1,200+</span>
+  656       <span class="stats-dot"></span>
+  657       <span>네이버 후기 300+</span>
+  658     </div>
+  659   </div>
+  660 </section>
+  661
+  662 <div class="divider"></div>
+  663
+  664 <!-- PROFILE -->
+  665 <section>
+  666   <div class="container">
+  667     <div class="tag reveal">PROFILE</div>
+  668     <h2 class="reveal reveal-delay-1">김주영 코치 경력</h2>
+  669
+  670     <div class="profile-grid">
+  671       <div class="profile-image reveal">
+  672         <img src="me.png" alt="김주영 코치" loading="lazy">
+  673       </div>
+  674
+  675       <div>
+  676         <div class="profile-box reveal reveal-delay-1">
+  677           <h3>학력 및 연구</h3>
+  678           <ul>
+  679             <li>한국체육대학교 학사·석사<br><span style="color:#666;font-size:0.9em">(전공: 생체역학)</span></l
+      i>
+  680             <li>한국체육대학교 Motion Innovation Center 연구보조</li>
+  681             <li>보행·러닝·무선 족저압 인솔 관련<br>논문 실험 및 장비 개발 참여</li>
+  682             <li>KLPGA 프로골퍼 대상<br>스윙 분석 학위논문</li>
+  683           </ul>
+  684         </div>
+  685
+  686         <div class="profile-box reveal reveal-delay-2">
+  687           <h3>주요 경력</h3>
+  688           <ul>
+  689             <li>15년 이상 현장 경험<br>3,000명 이상 재활·통증 관리 및 신체 평가</li>
+  690             <li>호텔신라 스포츠 레저사업부 인증<br>Advance Personal Trainer</li>
+  691             <li>삼성엔지니어링·삼성물산<br>부사장·전무·상무 전담 트레이닝</li>
+  692             <li>KPGA·KLPGA 프로골퍼 트레이닝<br>주니어 선수 트레이닝</li>
+  693             <li>TPI Korea 창립 멤버</li>
+  694             <li>리베라CC 골프 트레이닝 센터 TPI Korea 공동 운영</li>
+  695             <li>김주영 코치 PT Studio 6년 운영</li>
+  696           </ul>
+  697         </div>
+  698       </div>
+  699     </div>
+  700   </div>
+  701 </section>
+  702
+  703 <div class="divider"></div>
+  704
+  705 <!-- CTA -->
+  706 <section class="cta-section">
+  707   <div class="container">
+  708     <h2 class="reveal">
+  709       지금, 당신의 몸은<br>
+  710       어떤 기준으로 맡기고 계십니까?
+  711     </h2>
+  712
+  713     <p class="reveal reveal-delay-1">
+  714       가장 저렴한 선택이 아니라,<br>
+  715       <strong>가장 납득할 수 있는 선택</strong>이 필요할 때가 있습니다.
+  716     </p>
+  717
+  718     <p class="strong reveal reveal-delay-2">
+  719       이제는 내 몸이 아픈 진짜 이유부터<br>확인해볼 차례입니다.
+  720     </p>
+  721
+  722     <a href="https://open.kakao.com/o/sCbasubi" target="_blank" rel="noopener noreferrer"
+  723        class="cta-btn reveal reveal-delay-3">
+  724       김주영 코치에게 상담 받기
+  725     </a>
+  726   </div>
+  727 </section>
+  728
+  729 <footer>
+  730   <p style="color:#333;font-size:0.78rem">© 2025 김주영 코치. All rights reserved.</p>
+  731 </footer>
+  732
+  733 <script>
+  734 /* ── 스크롤 애니메이션 ── */
+  735 const observer = new IntersectionObserver((entries) => {
+  736   entries.forEach(entry => {
+  737     if (entry.isIntersecting) {
+  738       entry.target.classList.add('visible');
+  739     }
+  740   });
+  741 }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  742
+  743 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  744
+  745 /* ── 히어로 타이핑 효과 ── */
+  746 const text = '이유는 따로 있습니다.';
+  747 const target = document.getElementById('hero-typed');
+  748 let i = 0;
+  749
+  750 function type() {
+  751   if (i < text.length) {
+  752     target.textContent += text[i++];
+  753     setTimeout(type, 80);
+  754   }
+  755 }
+  756
+  757 // 페이지 로드 후 1.2초 뒤에 시작
+  758 setTimeout(type, 1200);
+  759 </script>
+  760
+  761 </body>
+  762 </html>
