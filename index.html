@@ -197,7 +197,8 @@ nav.scrolled { background:rgba(5,5,5,.93); backdrop-filter:blur(12px); border-bo
 .review-dot { width:6px; height:6px; border-radius:50%; background:var(--blue); flex-shrink:0; box-shadow:0 0 8px rgba(47,124,255,.7); }
 .review-tag { font-size:.68rem; font-weight:700; color:#5a9bff; letter-spacing:.02em; flex:1; text-align:left; }
 .review-stars { font-size:.62rem; color:var(--blue); opacity:.6; letter-spacing:1px; }
-.review-item img { width:100%; display:block; border-top:1px solid #111; }
+.review-item img { width:100%; display:block; border-top:1px solid #111; height:420px; object-fit:cover; object-position:top; }
+@media (max-width:640px) { .review-item img { height:280px; } }
 .carousel-dots { display:flex; justify-content:center; gap:6px; margin-top:20px; }
 .carousel-dot { width:6px; height:6px; border-radius:50%; background:var(--sub2); transition:background .3s, transform .3s; cursor:pointer; border:none; padding:0; }
 .carousel-dot.active { background:var(--blue); transform:scale(1.4); }
