@@ -86,12 +86,6 @@ nav.scrolled { background:rgba(5,5,5,.93); backdrop-filter:blur(12px); border-bo
   font-weight:900; line-height:1.28; margin-bottom:32px;
 }
 .hero h1 .blue-line { color:var(--blue); display:block; min-height:1.28em; }
-.cursor {
-  display:inline-block; width:3px; height:.85em;
-  background:var(--blue); margin-left:3px; vertical-align:middle;
-  animation:blink 1s step-end infinite;
-}
-@keyframes blink { 50%{opacity:0;} }
 .hero-desc {
   max-width:440px; margin:0 auto 40px;
   font-size:clamp(.95rem,2vw,1.05rem); color:var(--sub); line-height:1.9;
@@ -305,6 +299,59 @@ footer { border-top:1px solid var(--line); padding:32px 20px; text-align:center;
   .flow-arrow { transform:rotate(90deg); padding:6px 0; justify-content:center; }
   .profile-grid { grid-template-columns:220px 1fr; gap:32px; }
 }
+
+/* ── FAQ ── */
+.faq-list { max-width:680px; margin:0 auto; display:flex; flex-direction:column; gap:8px; }
+.faq-item { background:var(--card); border:1px solid var(--line); border-radius:16px; overflow:hidden; transition:border-color .25s; }
+.faq-item.open { border-color:rgba(47,124,255,.3); }
+.faq-q {
+  width:100%; background:none; border:none; cursor:pointer;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:22px 28px; gap:16px; text-align:left;
+}
+.faq-q-text { font-size:.95rem; font-weight:700; color:#fff; line-height:1.5; }
+.faq-icon { font-size:1.2rem; color:var(--blue); flex-shrink:0; transition:transform .3s; }
+.faq-item.open .faq-icon { transform:rotate(45deg); }
+.faq-a { display:none; padding:0 28px 22px; }
+.faq-item.open .faq-a { display:block; }
+.faq-a p { font-size:.88rem; color:var(--sub); line-height:1.8; margin:0; }
+
+/* ── 상담신청 폼 ── */
+.consult-section { background:#030303; }
+.consult-form { max-width:560px; margin:0 auto; display:flex; flex-direction:column; gap:14px; }
+.form-row { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+.form-field { display:flex; flex-direction:column; gap:6px; }
+.form-label { font-size:.75rem; font-weight:700; color:var(--sub2); letter-spacing:.06em; }
+.form-input, .form-select, .form-textarea {
+  background:#0d0d0d; border:1px solid var(--line2); border-radius:10px;
+  padding:14px 16px; color:#fff; font-size:.9rem; font-family:inherit;
+  outline:none; transition:border-color .2s; width:100%;
+}
+.form-input:focus, .form-select:focus, .form-textarea:focus { border-color:rgba(47,124,255,.5); }
+.form-select { appearance:none; cursor:pointer; }
+.form-textarea { resize:vertical; min-height:110px; line-height:1.7; }
+.form-submit {
+  background:var(--blue); color:#fff; font-size:.95rem; font-weight:800;
+  padding:16px; border-radius:12px; border:none; cursor:pointer; width:100%;
+  transition:background .2s, transform .2s;
+}
+.form-submit:hover { background:#1a68f0; transform:translateY(-2px); }
+.form-kakao {
+  display:flex; align-items:center; justify-content:center; gap:8px;
+  background:#FEE500; color:#191919; font-size:.88rem; font-weight:700;
+  padding:14px; border-radius:12px; text-decoration:none;
+  transition:opacity .2s;
+}
+.form-kakao:hover { opacity:.88; }
+.form-divider { display:flex; align-items:center; gap:12px; }
+.form-divider::before, .form-divider::after { content:''; flex:1; height:1px; background:var(--line); }
+.form-divider span { font-size:.75rem; color:var(--sub2); white-space:nowrap; }
+
+@media (max-width:640px) {
+  .faq-q { padding:18px 20px; }
+  .faq-a { padding:0 20px 18px; }
+  .form-row { grid-template-columns:1fr; }
+}
 </style>
 </head>
 <body>
@@ -312,7 +359,10 @@ footer { border-top:1px solid var(--line); padding:32px 20px; text-align:center;
 <!-- NAV -->
 <nav id="nav">
   <span class="nav-logo">체형교정·통증 관리 전문가 김주영 코치</span>
-  <a href="https://open.kakao.com/o/sCbasubi" target="_blank" rel="noopener noreferrer" class="nav-cta">무료 상담 받기</a>
+  <div style="display:flex;align-items:center;gap:16px;">
+    <a href="https://blog.naver.com/kimjuyoung-coach" target="_blank" rel="noopener noreferrer" style="font-size:.82rem;font-weight:600;color:var(--sub);text-decoration:none;transition:color .2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--sub)'">블로그</a>
+    <a href="https://open.kakao.com/o/sCbasubi" target="_blank" rel="noopener noreferrer" class="nav-cta">무료 상담 받기</a>
+  </div>
 </nav>
 
 <!-- HERO -->
@@ -321,7 +371,7 @@ footer { border-top:1px solid var(--line); padding:32px 20px; text-align:center;
     <p class="hero-meta r">한국체육대학교 학사·석사 &nbsp;|&nbsp; 15년차 트레이너</p>
     <h1 class="r d1">
       운동을 해도 통증이 계속된다면,<br>
-      <span class="blue-line" id="typed"></span><span class="cursor" id="cursor"></span>
+      <span class="blue-line" id="typed"></span>
     </h1>
     <p class="hero-desc r d2">
       대부분은 운동이 부족해서가 아니라<br>
@@ -554,6 +604,129 @@ footer { border-top:1px solid var(--line); padding:32px 20px; text-align:center;
 
 <hr class="div">
 
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow r">FAQ</span>
+      <h2 class="r d1">자주 묻는 질문</h2>
+    </div>
+    <div class="faq-list">
+
+      <div class="faq-item r">
+        <button class="faq-q">
+          <span class="faq-q-text">체험 수업이 있나요?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>네, 첫 방문 시 움직임 평가와 함께 체험 세션을 진행합니다. 카카오 채팅으로 문의 주시면 일정을 안내해 드립니다.</p>
+        </div>
+      </div>
+
+      <div class="faq-item r d1">
+        <button class="faq-q">
+          <span class="faq-q-text">통증이 있는데 운동을 해도 되나요?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>통증이 있는 상태에서 운동을 무리하게 진행하면 오히려 악화될 수 있습니다. 먼저 움직임 평가를 통해 통증의 원인을 파악한 뒤 그에 맞는 방법으로 접근합니다. 상담 후 결정하시는 것을 권장합니다.</p>
+        </div>
+      </div>
+
+      <div class="faq-item r d2">
+        <button class="faq-q">
+          <span class="faq-q-text">일반 PT와 무엇이 다른가요?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>일반 PT는 운동 처방이 먼저지만, 김주영 코치는 움직임 평가가 먼저입니다. 아픈 부위가 아닌 '왜 아플 수밖에 없는지' 원인을 찾고, 그 사람에게만 맞는 방법으로 접근합니다.</p>
+        </div>
+      </div>
+
+      <div class="faq-item r d2">
+        <button class="faq-q">
+          <span class="faq-q-text">운동 경험이 전혀 없어도 괜찮나요?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>물론입니다. 오히려 잘못된 습관이 굳어지기 전에 오시는 분들이 더 빠르게 변화를 경험하시는 경우가 많습니다. 운동 경험과 무관하게 각자의 몸 상태에 맞춰 시작합니다.</p>
+        </div>
+      </div>
+
+      <div class="faq-item r d3">
+        <button class="faq-q">
+          <span class="faq-q-text">몇 회 정도 받아야 효과가 있나요?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>개인마다 다르지만, 대부분 3~5회 내에 변화를 체감하십니다. 통증의 종류, 지속 기간, 생활 습관에 따라 달라지므로 첫 평가 후 구체적인 방향을 안내해 드립니다.</p>
+        </div>
+      </div>
+
+      <div class="faq-item r d3">
+        <button class="faq-q">
+          <span class="faq-q-text">위치와 주차는 어떻게 되나요?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>카카오 채팅으로 문의 주시면 정확한 위치와 주차 안내를 드리겠습니다.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="div">
+
+<!-- 상담신청 -->
+<section class="section consult-section" id="consult">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow r">CONSULTATION</span>
+      <h2 class="r d1">상담 신청</h2>
+      <p class="r d2" style="max-width:460px;margin:0 auto">
+        간단한 정보만 남겨주시면<br>빠르게 연락드리겠습니다.
+      </p>
+    </div>
+    <form class="consult-form r" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <div class="form-row">
+        <div class="form-field">
+          <label class="form-label">이름</label>
+          <input class="form-input" type="text" name="name" placeholder="홍길동" required>
+        </div>
+        <div class="form-field">
+          <label class="form-label">연락처</label>
+          <input class="form-input" type="tel" name="phone" placeholder="010-0000-0000" required>
+        </div>
+      </div>
+      <div class="form-field">
+        <label class="form-label">주요 증상</label>
+        <select class="form-select" name="symptom" required>
+          <option value="" disabled selected>해당하는 증상을 선택해주세요</option>
+          <option>허리 통증</option>
+          <option>목·어깨 통증</option>
+          <option>무릎 통증</option>
+          <option>체형 교정</option>
+          <option>골프·스포츠 퍼포먼스</option>
+          <option>기타</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label class="form-label">추가 내용 (선택)</label>
+        <textarea class="form-textarea" name="message" placeholder="통증 기간, 이전 치료 이력 등 자유롭게 적어주세요"></textarea>
+      </div>
+      <button class="form-submit" type="submit">상담 신청하기</button>
+      <div class="form-divider"><span>또는</span></div>
+      <a href="https://open.kakao.com/o/sCbasubi" target="_blank" rel="noopener noreferrer" class="form-kakao">
+        💬 카카오로 바로 문의하기
+      </a>
+    </form>
+  </div>
+</section>
+
+<hr class="div">
+
 <!-- CTA -->
 <section class="cta-section">
   <div class="wrap">
@@ -582,11 +755,31 @@ document.querySelectorAll('.r').forEach(el => io.observe(el));
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', scrollY > 40); }, { passive:true });
 
-const text = '이유는 따로 있습니다.';
+const phrases = ['운동이 문제가 아닙니다.', '몸을 잘못 쓰고 있는 겁니다.', '움직임 평가가 먼저입니다.'];
 const typed = document.getElementById('typed');
-let i = 0;
-function type() { if (i < text.length) { typed.textContent += text[i++]; setTimeout(type, 75); } }
+let pi = 0, ci = 0, deleting = false;
+function type() {
+  const cur = phrases[pi];
+  if (!deleting) {
+    typed.textContent = cur.slice(0, ++ci);
+    if (ci === cur.length) { deleting = true; setTimeout(type, 1800); return; }
+    setTimeout(type, 75);
+  } else {
+    typed.textContent = cur.slice(0, --ci);
+    if (ci === 0) { deleting = false; pi = (pi + 1) % phrases.length; setTimeout(type, 400); return; }
+    setTimeout(type, 40);
+  }
+}
 setTimeout(type, 1400);
+
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  });
+});
 </script>
 </body>
 </html>
